@@ -16,13 +16,19 @@
 
     const response = await fetch(url,options);
 
-    try{
-        const result = response.json();
-        return result
-        
-    }catch(error){
-        return {};
+    if(response.status === 204){
+        return {}
     }
+        const result = response.json();
+    
+    
+        if(!response.ok){
+            throw result;
+        }
+
+        return result;
+        
+   
 
 }
 

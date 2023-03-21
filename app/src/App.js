@@ -35,6 +35,8 @@ function App() {
   const onLoginSubmit = async (data) => {
   const result =  await AuthService.login(data);
    setAuth(result);
+
+   navigate('/')
   
       console.log(result)
 
