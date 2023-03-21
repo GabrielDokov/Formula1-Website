@@ -1,0 +1,63 @@
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover ; 
+    background-position: center;
+    color: #010101;
+    z-index: 1;
+    overflow: hidden;
+    
+  }
+  
+  .banner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .title .maintitle{
+    padding: 0px 0px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #fff;
+    font-weight: 900;
+    
+  }
+  
+  .title{
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    color: #010101;
+    
+    
+  }
+  
+
+   .title .secondtitle{
+    padding-bottom: 15px;
+    font-weight: 400;
+    color: #fff;
+    padding-left: 120px;
+   }
+  
+  /* }
+  .titlep:nth-last-child(2){
+    padding-bottom: 24px;
+  } */
+/*   
+  .title button{
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid #370511;
+    background-color: #370511;
+    color:#fff
+  } 
+   */

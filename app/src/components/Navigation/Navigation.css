@@ -1,0 +1,77 @@
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 70px;
+    background-color: #e10600;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+   text-decoration: none;
+  }
+
+  .lists{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 10px 50px;   
+    list-style: none;
+    /* text-transform: uppercase; */
+   
+    
+  }
+
+  .list.signup{
+
+    border:1px solid black;
+    border-radius: 5px;
+    padding: 6px 15px;
+    background-color:black;
+    color:#fff;
+    font-size: 13px;
+    line-height: 15px;
+    text-decoration: none;
+  }
+  
+  
+  .list{
+
+    text-decoration: inherit
+  
+  }
+
+  .list.signup i{
+    padding-right: 6px;
+    text-decoration: none;
+  }
+
+  .head .headingp{
+    margin: 10px 200px;
+    font-size: 22px;
+  }
+
+  
+.travel{
+    font-weight: 700;
+    font-size: 23px;
+  }
+
+
+  li{
+    font-weight: 700;
+  }
+  
+
+  .navItems{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .navItems:hover{
+    text-decoration: none;
+    color: #fff;
+  }
+  
+
+  
+  

@@ -1,0 +1,7 @@
+@media(width <= 600px){
+
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+}
