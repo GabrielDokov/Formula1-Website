@@ -20,12 +20,6 @@ function Header(){
             <h1 className="maintitle"><b>WELCOME TO THE F1 WORLD</b></h1>
 
             <h3 className="secondtitle">Everything about Formula1 in one place!</h3> 
-
-            {/* <!-- <p class="titlep">Each property is hand-picked,</p> --> */}
-            {/* <!-- <p class="titlep">personally visited and cannot be found elsewhere.</p> --> */}
-
-            {/* <!-- <button>Explore homes</button> --> */}
-
           
         </div>
 

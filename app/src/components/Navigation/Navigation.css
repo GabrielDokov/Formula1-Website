@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
-    margin: 10px 50px;   
+    margin: 10px 150px;   
     list-style: none;
     /* text-transform: uppercase; */
    
@@ -23,6 +23,29 @@
 
   .list.signup{
 
+    border:1px solid black;
+    border-radius: 5px;
+    padding: 6px 15px;
+    background-color:black;
+    color:#fff;
+    font-size: 13px;
+    line-height: 15px;
+    text-decoration: none;
+   
+  }
+
+  .list.login{
+    border:1px solid black;
+    border-radius: 5px;
+    padding: 6px 15px;
+    background-color:black;
+    color:#fff;
+    font-size: 13px;
+    line-height: 15px;
+    text-decoration: none;
+  }
+
+  .list.register{
     border:1px solid black;
     border-radius: 5px;
     padding: 6px 15px;
@@ -45,15 +68,29 @@
     text-decoration: none;
   }
 
+  .list.login i{
+    padding-right: 6px;
+    text-decoration: none;
+  }
+
+  .list.register i{
+    padding-right: 6px;
+    text-decoration: none;
+  }
+
   .head .headingp{
-    margin: 10px 200px;
+    margin: 10px 220px;
     font-size: 22px;
+    text-decoration: none;
+    color: #fff;
   }
 
   
 .travel{
     font-weight: 700;
     font-size: 23px;
+    text-decoration: none;
+    color: #fff;
   }
 
 
@@ -70,6 +107,12 @@
   .navItems:hover{
     text-decoration: none;
     color: #fff;
+  }
+
+  .noUser{
+    display: flex;
+    gap: 10px;
+    margin-left: 360px;
   }
   
 

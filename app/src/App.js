@@ -11,13 +11,12 @@ import CreateDriver from "./components/CreateDriver/CreateDriver";
 import * as driverServices from './services/driverServices'
 import DriverDetails from "./components/DriverDetails/DriverDetails";
 import TeamDetails from "./components/TeamDetails/TeamDetails";
-import SignIn from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import { AuthContext } from "./contexts/AuthContext";
 import { useState } from "react";
-
 import * as AuthService from './services/authServices'
 import Login from "./components/Login/Login";
+import Logout from "./components/Logout/Logout";
 
 
 function App() {
@@ -38,19 +37,45 @@ function App() {
 
    navigate('/')
   
-      console.log(result)
+      console.log(result);
+  }
 
 
   
+  const onRegisterSumbit = async(data) => {
+
+    const {confirmPass, ...registerData} = data
 
 
+    if(confirmPass !== registerData.password){
+      return;
+    }
+
+    const result = await AuthService.register(registerData);
+
+    setAuth(result)
+    navigate('/')
 
   }
 
 
+
+  const context = {
+    onLoginSubmit,
+    onRegisterSumbit,
+    userId: auth._id,
+    token: auth.accessToken,
+    username: auth.username,
+    isAuthenticated: !!auth.accessToken
+  }
+
+
+
+
+
   return (
     
-<AuthContext.Provider value={{onLoginSubmit}}>
+<AuthContext.Provider value={context}>
     <Navigation></Navigation> 
       <Routes>
           <Route path="/" element={<Header></Header>}></Route>
@@ -62,6 +87,7 @@ function App() {
           <Route path='/teams/:teamId' element={<TeamDetails></TeamDetails>}></Route>
           <Route path='/login' element={<Login ></Login>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
+          <Route path='/logout' element={<Logout></Logout>}></Route>
       </Routes>
     <Footer></Footer>
 </AuthContext.Provider>
