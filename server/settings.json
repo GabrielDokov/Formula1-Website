@@ -3,48 +3,282 @@
     "protectedData": {
         "users": {
             "35c62d76-8152-4626-8712-eeb96381bea8": {
-                "username": "Peter",
+                "username": "gabriel@abv.bg",
                 "hashedPassword": "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
-                "username": "John",
+                "username": "george@abv.bg",
                 "hashedPassword": "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             }
         },
         "sessions": {}
     },
     "seedData": {
-        "cars": {
-            "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
+        "drivers": {
+            "0": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "brand": "Audi",
-                "model": "A3",
-                "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                "year": 2018,
-                "imageUrl": "/images/audia3.jpg",
-                "price": 25000,
-                "_createdOn": 1616162253496
+                "driverId": "albon",
+                "permanentNumber": "23",
+                "code": "ALB",
+                "url": "http://en.wikipedia.org/wiki/Alexander_Albon",
+                "imageURL": "https://akns-images.eonline.com/eol_images/Entire_Site/2022924/rs_1024x759-221024143126-_Alex-Albon-2.jpg?fit=around%7C1024:759&output-quality=90&crop=1024:759;center,top",
+                "givenName": "Alexander",
+                "familyName": "Albon",
+                "dateOfBirth": "1996-03-23",
+                "nationality": "Thai",
+                "_id": "0"
             },
-            "8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                "brand": "Mercedes",
-                "model": "A-class",
-                "description": "Voluptate expedita odio tempore aliquam rem neque sunt dignissimos ratione nulla quod dolore dolor animi cupiditate, labore ad maiores?",
-                "year": 2016,
-                "imageUrl": "/images/benz.jpg",
-                "price": 27000,
-                "_createdOn": 1616162253496
+            "1": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "alonso",
+                "permanentNumber": "14",
+                "code": "ALO",
+                "url": "http://en.wikipedia.org/wiki/Fernando_Alonso",
+                "imageURL": "https://novsport.com/images/news/2023/03/3245142/8259880.jpg",
+                "givenName": "Fernando",
+                "familyName": "Alonso",
+                "dateOfBirth": "1981-07-29",
+                "nationality": "Spanish",
+                "_id": "1"
             },
-            "3a432947-3e43-42a8-bcbc-100d2b199892": {
-                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                "brand": "BMW",
-                "model": "3 Series",
-                "description": "Quisquam modi vitae explicabo fugit delectus voluptate fuga nisi quo impedit temporibus est magni optio, at, natus odit maxime vero corporis unde sequi? Minima atque, laborum impedit deserunt sequi assumenda laudantium vitae corporis?",
-                "year": 2016,
-                "imageUrl": "/images/bmw.jpg",
-                "price": 22000,
-                "_createdOn": 1616162253496
+            "2": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "bottas",
+                "permanentNumber": "77",
+                "code": "BOT",
+                "url": "http://en.wikipedia.org/wiki/Valtteri_Bottas",
+                "imageURL": "https://cdn-3.motorsport.com/images/amp/YEQLvWPY/s6/valtteri-bottas-alfa-romeo-f1-.jpg",
+                "givenName": "Valtteri",
+                "familyName": "Bottas",
+                "dateOfBirth": "1989-08-28",
+                "nationality": "Finnish",
+                "_id": "2"
+            },
+            "3":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "de_vries",
+                "permanentNumber": "45",
+                "code": "DEV",
+                "url": "http://en.wikipedia.org/wiki/Nyck_de_Vries",
+                "imageURL": "https://d3cm515ijfiu6w.cloudfront.net/wp-content/uploads/2022/10/08151121/nyck-de-vries-japan-2022-planetf1.jpg",
+                "givenName": "Nyck",
+                "familyName": "de Vries",
+                "dateOfBirth": "1995-02-06",
+                "nationality": "Dutch",
+                "_id": "3"
+            },
+            "4": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "gasly",
+                "permanentNumber": "10",
+                "code": "GAS",
+                "url": "http://en.wikipedia.org/wiki/Pierre_Gasly",
+                "imageURL": "https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/gasly.jpg.img.1536.high.jpg",
+                "givenName": "Pierre",
+                "familyName": "Gasly",
+                "dateOfBirth": "1996-02-07",
+                "nationality": "French",
+                "_id": "4"
+            },
+            "5":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "hamilton",
+                "permanentNumber": "44",
+                "code": "HAM",
+                "url": "http://en.wikipedia.org/wiki/Lewis_Hamilton",
+                "imageURL": "https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cq_auto:good%2Cw_1200/MTk2MjQ2MTg1MjQ0MTA4MDgw/untitled-design---2023-03-02t120616305.png",
+                "givenName": "Lewis",
+                "familyName": "Hamilton",
+                "dateOfBirth": "1985-01-07",
+                "nationality": "British",
+                "_id": "5"
+            },
+            "6":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "hulkenberg",
+                "permanentNumber": "27",
+                "code": "HUL",
+                "url": "http://en.wikipedia.org/wiki/Nico_H%C3%BClkenberg",
+                "imageURL": "https://www.racefans.net/wp-content/uploads/2023/02/racefansdotnet-2023-02-11_0542243.jpg",
+                "givenName": "Nico",
+                "familyName": "Hülkenberg",
+                "dateOfBirth": "1987-08-19",
+                "nationality": "German",
+                "_id": "6"
+            },
+            "7":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "leclerc",
+                "permanentNumber": "16",
+                "code": "LEC",
+                "url": "http://en.wikipedia.org/wiki/Charles_Leclerc",
+                "imageURL": "https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk0MDk2NDQxMzY5NTY4Nzcz/charles-leclerc.jpg",
+                "givenName": "Charles",
+                "familyName": "Leclerc",
+                "dateOfBirth": "1997-10-16",
+                "nationality": "Monegasque",
+                "_id": "7"
+            },
+            "8": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "kevin_magnussen",
+                "permanentNumber": "20",
+                "code": "MAG",
+                "url": "http://en.wikipedia.org/wiki/Kevin_Magnussen",
+                "imageURL": "https://library.sportingnews.com/styles/crop_style_16_9_mobile_2x/s3/2022-03/Magnussen.jpg?itok=pxuKJEOO",
+                "givenName": "Kevin",
+                "familyName": "Magnussen",
+                "dateOfBirth": "1992-10-05",
+                "nationality": "Danish",
+                "_id": "8"
+            },
+            "9":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "norris",
+                "permanentNumber": "4",
+                "code": "NOR",
+                "url": "http://en.wikipedia.org/wiki/Lando_Norris",
+                "imageURL": "https://i2-prod.mirror.co.uk/incoming/article29208013.ece/ALTERNATES/n615/0_Lando-Norris-130223-MCLAREN-RACING.jpg",
+                "givenName": "Lando",
+                "familyName": "Norris",
+                "dateOfBirth": "1999-11-13",
+                "nationality": "British",
+                "_id": "9"
+            },
+            "10": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "ocon",
+                "permanentNumber": "31",
+                "code": "OCO",
+                "url": "http://en.wikipedia.org/wiki/Esteban_Ocon",
+                "imageURL": "https://cdn-3.motorsport.com/images/amp/YMdyOWL2/s6/esteban-ocon-alpine-f1-team-at.jpg",
+                "givenName": "Esteban",
+                "familyName": "Ocon",
+                "dateOfBirth": "1996-09-17",
+                "nationality": "French",
+                "_id": "10"
+            },
+            "11":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "perez",
+                "permanentNumber": "11",
+                "code": "PER",
+                "url": "http://en.wikipedia.org/wiki/Sergio_P%C3%A9rez",
+                "imageURL": "https://cdn-9.motorsport.com/images/amp/6D1Q7ZV0/s1000/sergio-perez-red-bull-racing-i.jpg",
+                "givenName": "Sergio",
+                "familyName": "Pérez",
+                "dateOfBirth": "1990-01-26",
+                "nationality": "Mexican",
+                "_id": "11"
+            },
+            "12":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "piastri",
+                "permanentNumber": "81",
+                "code": "PIA",
+                "url": "http://en.wikipedia.org/wiki/Oscar_Piastri",
+                "imageURL": "https://i2-prod.mirror.co.uk/incoming/article29218720.ece/ALTERNATES/n615/0_Oscar-Piastri-130223-MCLAREN-RACING.jpg",
+                "givenName": "Oscar",
+                "familyName": "Piastri",
+                "dateOfBirth": "2001-04-06",
+                "nationality": "Australian",
+                "_id": "12"
+            },
+            "13":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "russell",
+                "permanentNumber": "63",
+                "code": "RUS",
+                "url": "http://en.wikipedia.org/wiki/George_Russell_%28racing_driver%29",
+                "imageURL": "https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk0NDg0MzQ5OTMwODQxNjA1/m334935.jpg",
+                "givenName": "George",
+                "familyName": "Russell",
+                "dateOfBirth": "1998-02-15",
+                "nationality": "British",
+                "_id": "13"
+            },
+            "14":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "sainz",
+                "permanentNumber": "55",
+                "code": "SAI",
+                "url": "http://en.wikipedia.org/wiki/Carlos_Sainz_Jr.",
+                "imageURL": "https://www.racefans.net/wp-content/uploads/2022/06/Friday-at-Canadian-GPXPB_1152347_HiRes.jpg",
+                "givenName": "Carlos",
+                "familyName": "Sainz",
+                "dateOfBirth": "1994-09-01",
+                "nationality": "Spanish",
+                "_id": "14"
+            },
+            "15": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "sargeant",
+                "permanentNumber": "2",
+                "code": "SAR",
+                "url": "http://en.wikipedia.org/wiki/Logan_Sargeant",
+                "imageURL": "https://www.racefans.net/wp-content/uploads/2022/10/racefansdotnet-21-10-22-14-23-45-23.jpg",
+                "givenName": "Logan",
+                "familyName": "Sargeant",
+                "dateOfBirth": "2000-12-31",
+                "nationality": "American",
+                "_id": "15"
+            },
+            "16":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "stroll",
+                "permanentNumber": "18",
+                "code": "STR",
+                "url": "http://en.wikipedia.org/wiki/Lance_Stroll",
+                "imageURL": "https://ca-times.brightspotcdn.com/dims4/default/2f17462/2147483647/strip/false/crop/4968x3312+0+0/resize/1486x991!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F95%2Fab%2F478bc4580086b6fe0fde8e433e2e%2Ffd89daf58ae54ac6b263d5707bfd38a9",
+                "givenName": "Lance",
+                "familyName": "Stroll",
+                "dateOfBirth": "1998-10-29",
+                "nationality": "Canadian",
+                "_id": "16"
+            },
+            "17":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "tsunoda",
+                "permanentNumber": "22",
+                "code": "TSU",
+                "url": "http://en.wikipedia.org/wiki/Yuki_Tsunoda",
+                "imageURL": "https://e2.365dm.com/22/09/1600x900/skysports-yuki-tsunoda-alphatauri_5907482.jpg",
+                "givenName": "Yuki",
+                "familyName": "Tsunoda",
+                "dateOfBirth": "2000-05-11",
+                "nationality": "Japanese",
+                "_id": "17"
+            },
+            "18":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "max_verstappen",
+                "permanentNumber": "33",
+                "code": "VER",
+                "url": "http://en.wikipedia.org/wiki/Max_Verstappen",
+                "imageURL": "https://cdn-8.motorsport.com/images/amp/0rGyNem2/s1000/formula-1-abu-dhabi-gp-2022-po-2.jpg",
+                "givenName": "Max",
+                "familyName": "Verstappen",
+                "dateOfBirth": "1997-09-30",
+                "nationality": "Dutch",
+                "_id": "18"
+            },
+            "19":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "driverId": "zhou",
+                "permanentNumber": "24",
+                "code": "ZHO",
+                "url": "http://en.wikipedia.org/wiki/Guanyu_Zhou",
+                "imageURL": "https://i2-prod.examinerlive.co.uk/sport/uk-sport-news/article24265636.ece/ALTERNATES/s615/0_Zhou.jpg",
+                "givenName": "Guanyu",
+                "familyName": "Zhou",
+                "dateOfBirth": "1999-05-30",
+                "nationality": "Chinese",
+                "_id": "19"
             }
+
+            
+
+            
         }
     },
 

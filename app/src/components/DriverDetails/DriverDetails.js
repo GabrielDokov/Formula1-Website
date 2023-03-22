@@ -40,15 +40,26 @@ function DriverDetails(){
 
     }
 
-    const deleteClick = () => {
-      return(
-        <>
+    // const deleteClick = () => {
+    //   return(
+    //     <>
 
-        <h1>Gabriel</h1>
+    //     <h1>Gabriel</h1>
         
-        </>
-      )
+    //     </>
+    //   )
+    // }
+
+
+    const onUpdateDriver = () => {
+      console.log('clicked')
+      driverServices.putOne(driverId).
+      then(result => {
+        console.log(result)
+      })
     }
+
+
 
   
 
@@ -65,8 +76,8 @@ function DriverDetails(){
     <p>Date of Birth: {driver.dateOfBirth}</p>
     <p>Driver Code: {driver.code}</p>
 
-    <button>EDIT</button>
-    <button onClick={deleteClick}>Delete</button>
+    <button onClick={onUpdateDriver}>EDIT</button>
+    <button onClick={onDeleteDriver}>Delete</button>
   </div>
 </div> 
 

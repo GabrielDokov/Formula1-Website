@@ -2,6 +2,7 @@ import './Login.css'
 import { AuthContext } from '../../contexts/AuthContext'
 import { useContext } from 'react'
 import { useForm } from '../../hooks/useForm'
+// import logo from '../../images/f1-logo-white.jpg'
 
 const LoginFormKeys = {
     Username: 'username',
@@ -30,9 +31,11 @@ function Login()
            <header>
                <h2 className='driverTitle'>Login</h2>
            </header>
+
+           {/* <img className='imgsign' src={logo} alt='f1logo'></img> */}
          
            <label className='label' >Email</label>
-           <input type="email" className="details" name={LoginFormKeys.Username}
+           <input type="text" className="details" name={LoginFormKeys.Username}
            value={values.email}
            onChange={changeHandler} />
 

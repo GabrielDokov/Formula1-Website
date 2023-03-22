@@ -19,6 +19,7 @@ import Login from "./components/Login/Login";
 import Logout from "./components/Logout/Logout";
 
 
+
 function App() {
 
   const[auth, setAuth] = useState({});
@@ -40,22 +41,24 @@ function App() {
       console.log(result);
   }
 
-
-  
   const onRegisterSumbit = async(data) => {
 
     const {confirmPass, ...registerData} = data
-
-
     if(confirmPass !== registerData.password){
       return;
     }
-
     const result = await AuthService.register(registerData);
-
     setAuth(result)
     navigate('/')
 
+  }
+
+  const onLogout = async () => {
+    // AuthService.logout();
+    
+    setAuth({});
+
+    //NEED TO BE DONE!!!
   }
 
 
@@ -63,6 +66,7 @@ function App() {
   const context = {
     onLoginSubmit,
     onRegisterSumbit,
+    onLogout,
     userId: auth._id,
     token: auth.accessToken,
     username: auth.username,

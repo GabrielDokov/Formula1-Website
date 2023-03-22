@@ -11,3 +11,7 @@ export const register = (registerData) => {
    return request.post(`${baseUrl}/register`, registerData)
 }
 
+export const logout = () => {
+   return request.get(`${baseUrl}/logout`)
+   //NEED TO BE DONE
+}

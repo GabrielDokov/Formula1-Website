@@ -29,3 +29,9 @@ export const delOne = async(driverId) => {
     console.log(result)
     return result
 }
+
+export const putOne = async(driverId) => {
+    const result = await request.put(`${baseUrl}/${driverId}`);
+    console.log(result);
+    return result;
+}
