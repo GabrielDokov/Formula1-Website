@@ -1,3 +1,4 @@
+import './Teams.css'
 import { useState, useEffect } from "react";
 import * as teamService from "../../services/teamServices";
 import { Link } from 'react-router-dom'
@@ -10,7 +11,6 @@ function Teams() {
   useEffect(() => {
     teamService.getAllTeams().then((result) => {
       setTeams(result);
-      console.log(result);
     });
   }, []);
 

@@ -9,7 +9,7 @@ export const getAllTeams =  async () => {
  
  const teams = Object.values(result);
  
- console.log(teams)
+//  console.log(teams)
 
  return teams
 
@@ -17,6 +17,6 @@ export const getAllTeams =  async () => {
 
 export const getOne = async(teamId) => {
     const result = await request.get(`${baseUrl}/${teamId}`)
-    console.log(result);
+    // console.log(result);
     return result
 }

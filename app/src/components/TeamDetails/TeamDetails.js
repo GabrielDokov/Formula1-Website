@@ -1,3 +1,4 @@
+import './TeamDetails.css'
 import * as teamServices from '../../services/teamServices'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -32,8 +33,8 @@ function TeamDetails(){
     <p>Driver 2: {team.driver2} </p>
     <p>Reserved Driver: {team.reserveDriver} </p>
 
-    <a href="#">EDIT</a>
-    <a href='#'>Delete</a>
+    <a href="/">EDIT</a>
+    <a href='/'>Delete</a>
   </div>
 </div> 
 

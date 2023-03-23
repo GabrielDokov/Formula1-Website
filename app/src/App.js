@@ -38,7 +38,7 @@ function App() {
 
    navigate('/')
   
-      console.log(result);
+      // console.log(result);
   }
 
   const onRegisterSumbit = async(data) => {

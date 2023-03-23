@@ -8,7 +8,7 @@ export const getAllCircuits =  async () => {
  
  const circuits = Object.values(result);
 
- console.log(circuits)
+//  console.log(circuits)
 
  return circuits
 

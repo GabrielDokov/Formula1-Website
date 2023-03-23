@@ -11,7 +11,7 @@ function Circuits() {
     circuitServices.getAllCircuits()
     .then((result) => {
       setCurtuits(result);
-      console.log(result);
+      // console.log(result);
     });
   }, []);
 
@@ -26,17 +26,17 @@ function Circuits() {
     <Accordion >
        {circuits.map((c) => 
         <Accordion.Item eventKey={c.circuitId} key={c._id} >
-        
-        
-        <>
           <Accordion.Header>{c.circuitName}</Accordion.Header>
           <Accordion.Body>
-            Country: {c.Location.country}
-            Latitude:{c.Location.lat}     
-            Longtitude:{c.Location.long}
-            Location:{c.Location.locality}
+            <div className="information">
+               <p> <b>Country</b>   :   {c.Location.country}</p>
+               <p><b>Latitude</b>   :{c.Location.lat}</p>  
+               <p><b>Longtitude</b> :{c.Location.long}</p>
+               <p><b>Location</b>   :{c.Location.locality}</p>
+            </div>
+        
           </Accordion.Body>
-          </>
+          
           
         </Accordion.Item>
      )} 

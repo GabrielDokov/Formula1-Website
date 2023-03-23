@@ -39,7 +39,7 @@ function CreateDriver({
          <section>
 
         <form onSubmit={onSubmit}>
-        <div class="main">
+        <div className="main">
             <header>
                 <h2 className='driverTitle'>Create Driver</h2>
             </header>
