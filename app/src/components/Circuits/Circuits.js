@@ -28,11 +28,18 @@ function Circuits() {
         <Accordion.Item eventKey={c.circuitId} key={c._id} >
           <Accordion.Header>{c.circuitName}</Accordion.Header>
           <Accordion.Body>
+
+            <div className="circuitMain">
             <div className="information">
-               <p> <b>Country</b>   :   {c.Location.country}</p>
+               <p><b>Country</b>    :{c.Location.country}</p>
                <p><b>Latitude</b>   :{c.Location.lat}</p>  
                <p><b>Longtitude</b> :{c.Location.long}</p>
                <p><b>Location</b>   :{c.Location.locality}</p>
+            </div>
+
+            <div>
+              <img  class='circuitImg' src={c.Location.imageUrl} alt="mario"></img>
+            </div>
             </div>
         
           </Accordion.Body>

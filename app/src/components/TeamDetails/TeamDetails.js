@@ -32,9 +32,6 @@ function TeamDetails(){
     <p>Driver 1: {team.driver1} </p>
     <p>Driver 2: {team.driver2} </p>
     <p>Reserved Driver: {team.reserveDriver} </p>
-
-    <a href="/">EDIT</a>
-    <a href='/'>Delete</a>
   </div>
 </div> 
 

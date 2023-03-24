@@ -2,6 +2,7 @@ import './Login.css'
 import { AuthContext } from '../../contexts/AuthContext'
 import { useContext } from 'react'
 import { useForm } from '../../hooks/useForm'
+import {Link} from 'react-router-dom'
 // import logo from '../../images/f1-logo-white.jpg'
 
 const LoginFormKeys = {
@@ -26,7 +27,7 @@ function Login()
         <>
         <section>
 
-    <form method='POST'  onSubmit={onSubmit} >
+    <form  className='loginForm' method='POST'  onSubmit={onSubmit} >
        <div className="main">
            <header>
                <h2 className='driverTitle'>Login</h2>
@@ -44,7 +45,11 @@ function Login()
             value={values.password}
             onChange={changeHandler} />
           
-           <button type='submit'>Login</button>
+           <button className='loginBtn' type='submit'>Login</button>
+
+           <p>
+            <span className='span'>If you don't have a profile click <Link to="/register" className='link'>here</Link></span>
+           </p>
        </div>
    </form>
 

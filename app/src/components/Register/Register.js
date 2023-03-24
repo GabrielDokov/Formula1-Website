@@ -6,6 +6,8 @@ import { AuthContext } from "../../contexts/AuthContext";
 
 import { Link } from 'react-router-dom'
 
+import './Register.css'
+
 
 function Register() {
 
@@ -44,10 +46,10 @@ function Register() {
           <input type="password"className="details" name="confirmPass" value={values.confirmPass} 
           onChange={changeHandler} ></input>
 
-           <button type='submit'>Login</button>
+           <button className="registerBtn" type='submit'>Register</button>
 
            <p>
-            <span>If you already have a profile click <Link to="/login">here</Link></span>
+            <span>If you already have a profile click <Link to="/login" className='link'>here</Link></span>
            </p>
        </div>
    </form>
