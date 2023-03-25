@@ -1,5 +1,6 @@
 import f1logo from '../../images/f1-logo-white.jpg'
 import './Footer.css'
+// import { Link } from 'react-router-dom'
 
 
 function Footer(){

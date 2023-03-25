@@ -8,10 +8,12 @@
     padding: 0px 0px;
     border-radius: 20px;
     box-shadow: 0px 0px 80px 20px black;
+    border: 1px solid black;
 }
 
 .card:hover{
  box-shadow: 0px 0px 40px 20px #e10600;
+ border: 2px solid #e10600;
  
 }
 
@@ -28,4 +30,22 @@ img{
     border-top-right-radius: 20px;
     border-top-left-radius: 20px
     
+}
+
+.container{
+    margin: 20px 0px;
+    
+}
+.driverItems{
+    margin: 20px 10px;
+    font-size: 18px;
+}
+
+.edit{
+    margin-right: 26px;
+}
+
+.driverItems b {
+
+    color: #e10600  ;
 }

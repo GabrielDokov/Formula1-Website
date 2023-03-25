@@ -28,10 +28,15 @@ function TeamDetails(){
   <img src={team.imageUrl} alt="Avatar" />
   <div className="container">
     <h4><b>{team.name} </b></h4>
-    <p>Nationality: {team.nationality}</p>
-    <p>Driver 1: {team.driver1} </p>
-    <p>Driver 2: {team.driver2} </p>
-    <p>Reserved Driver: {team.reserveDriver} </p>
+
+    <div className='teamDetails'>
+
+    <p><b>Nationality</b>:  {team.nationality}</p>
+    <p><b>Driver 1</b>:  {team.driver1} </p>
+    <p><b>Driver 2</b>:  {team.driver2} </p>
+    <p><b>Reserved Driver</b>:  {team.reserveDriver}</p>
+
+    </div>
   </div>
 </div> 
 

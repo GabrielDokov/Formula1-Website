@@ -11,9 +11,6 @@ function Navigation() {
    
     <div className="head">
 
-   
-   
-   
         <div className="travel">
         <Link  to="/" className="headingp">Formula1</Link>
         </div>
@@ -40,7 +37,7 @@ function Navigation() {
             </li>
 
             <li className="list">
-              <Link className='navItems'to="/create-driver">{username}</Link>
+              <Link className='navItems'>{username}</Link>
             </li>
 
             <li className="list signup">

@@ -2,6 +2,10 @@ import { useEffect, useState  } from "react";
 import { useParams,useNavigate } from "react-router-dom"
 import './DriverDetails.css';
 import * as driverServices from '../../services/driverServices';
+// import Modal from "./ModalDrivers";
+// import ModalDrivers from "./ModalDrivers";
+
+
 
 
 
@@ -49,6 +53,7 @@ function DriverDetails(){
       //   console.log(result)
       }
     
+     
 
 
 
@@ -62,13 +67,16 @@ function DriverDetails(){
   <img src={driver.imageURL} alt="Avatar" />
   <div className="container">
     <h4><b>{driver.givenName} {driver.familyName}</b></h4>
-    <p>Nationality: {driver.nationality}</p>
-    <p>Driver Number: {driver.permanentNumber}</p>
-    <p>Date of Birth: {driver.dateOfBirth}</p>
-    <p>Driver Code: {driver.code}</p>
 
-    <button onClick={onUpdateDriver}>EDIT</button>
-    <button onClick={onDeleteDriver}>Delete</button>
+    <div className="driverItems">
+    <p><b>Nationality</b>: {driver.nationality}</p>
+    <p><b>Driver Number</b>: {driver.permanentNumber}</p>
+    <p><b>Date of Birth</b>: {driver.dateOfBirth}</p>
+    <p><b>Driver Code</b>: {driver.code}</p>
+  </div>
+
+    <button className="edit" onClick={onUpdateDriver}>EDIT</button>
+    <button  className="delete" onClick={onDeleteDriver}>Delete</button>
   </div>
 </div> 
 

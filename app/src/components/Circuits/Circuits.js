@@ -38,7 +38,7 @@ function Circuits() {
             </div>
 
             <div>
-              <img  class='circuitImg' src={c.Location.imageUrl} alt="mario"></img>
+              <img  class='circuitImg' src={c.Location.imageUrl} alt="CircuitsImg"></img>
             </div>
             </div>
         
