@@ -8,15 +8,27 @@ import Circuits from "./components/Circuits/Circuits";
 import Teams from "./components/Teams/Teams";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import CreateDriver from "./components/CreateDriver/CreateDriver";
-import * as driverServices from './services/driverServices'
+
+import  {driverServiceFactory} from './services/driverServices'
+
 import DriverDetails from "./components/DriverDetails/DriverDetails";
 import TeamDetails from "./components/TeamDetails/TeamDetails";
 import Register from "./components/Register/Register";
 import { AuthContext } from "./contexts/AuthContext";
 import { useState } from "react";
-import * as AuthService from './services/authServices'
+
+import {authServiceFactory} from './services/authServices'
+
 import Login from "./components/Login/Login";
 import Logout from "./components/Logout/Logout";
+
+
+
+// import {useService} from "./hooks/useService";
+
+//import {driverServiceFactory} from './services/driverServices'
+
+
 
 
 
@@ -24,16 +36,27 @@ function App() {
 
   const[auth, setAuth] = useState({});
 
+
+  const driverServices = driverServiceFactory(auth.accessToken)
+  const authService = authServiceFactory(auth.accessToken)
+
+
+
+
+  console.log(driverServices)
+
+
   const navigate = useNavigate();
-  const onCreateGameSubmit = async (data) => {
+  const onCreateDriverSubmit = async (data) => {
    const newDriver = await driverServices.create(data);
+   console.log(data)
    console.log(newDriver);
    navigate('/drivers')
   }
 
 
   const onLoginSubmit = async (data) => {
-  const result =  await AuthService.login(data);
+  const result =  await authService.login(data);
    setAuth(result);
 
    navigate('/')
@@ -47,7 +70,7 @@ function App() {
     if(confirmPass !== registerData.password){
       return;
     }
-    const result = await AuthService.register(registerData);
+    const result = await authService.register(registerData);
     setAuth(result)
     navigate('/')
 
@@ -86,7 +109,7 @@ function App() {
           <Route path="/circuits" element={<Circuits></Circuits>}></Route>
           <Route path="/teams" element={<Teams></Teams>}></Route>
           <Route path="/drivers" element={ <Drivers></Drivers>} ></Route>
-          <Route path='/create-driver' element={<CreateDriver onCreateGameSubmit={onCreateGameSubmit}></CreateDriver>}></Route>
+          <Route path='/create-driver' element={<CreateDriver onCreateDriverSubmit={onCreateDriverSubmit}></CreateDriver>}></Route>
           <Route path="/drivers/:driverId" element={<DriverDetails></DriverDetails>}></Route>
           <Route path='/teams/:teamId' element={<TeamDetails></TeamDetails>}></Route>
           <Route path='/login' element={<Login ></Login>}></Route>

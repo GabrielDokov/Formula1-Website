@@ -1,17 +1,20 @@
 import './Drivers.css'
 import './DriversResponsive.css'
-import * as driverServices from '../../services/driverServices'
+import {driverServiceFactory}from '../../services/driverServices'
 import {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import { useService } from '../../hooks/useService'
 
 function Main(){
 
     const [drivers, setDrivers] = useState([]);
 
+    const driverInfo = useService(driverServiceFactory)
+
 
     useEffect(() => {
   
-      driverServices.getAll()
+      driverInfo.getAll()
       .then(result => {
         setDrivers(result);
         // console.log(result)
@@ -41,9 +44,6 @@ function Main(){
 
                    <Link className='LinkDrivers' to={`/drivers/${d._id}`}>Details</Link>
 
-                {/* <h3>Nationality: {d.nationality}</h3>
-
-                <h4>RaceNumber: {d.permanentNumber}</h4> */}
                 </div>)}
 
         </section>

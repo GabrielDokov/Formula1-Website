@@ -1,4 +1,6 @@
- const  request =  async (method, url, data) => {
+ const  request =  async (method, token, url, data) => {
+
+
 
     const options = {}
 
@@ -11,6 +13,14 @@
 
             };
             options.body = JSON.stringify(data)
+        }
+    }
+
+
+    if(token){
+        options.headers = {
+            ...options.headers,
+            'X-Authorization': token
         }
     }
 
@@ -32,8 +42,14 @@
 
 }
 
-export const get = request.bind(null,'GET');
-export const post = request.bind(null,'POST');
-export const del = request.bind(null,'DELETE');
-export const patch = request.bind(null, 'PATCH');
-export const put = request.bind(null, 'PUT');
+
+export const requestFactory = (token) => {
+    
+    return {
+        get:request.bind(null,'GET',token),
+        post:request.bind(null,'POST',token),
+        del:request.bind(null,'DELETE',token),
+        patch:request.bind(null, 'PATCH',token),
+        put:request.bind(null, 'PUT',token),
+    }
+}

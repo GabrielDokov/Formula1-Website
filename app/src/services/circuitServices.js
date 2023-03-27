@@ -1,15 +1,22 @@
-import * as request from './requester'
+import {requestFactory} from './requester'
 
 const baseUrl = 'http://localhost:3030/jsonstore/circuits';
 
-export const getAllCircuits =  async () => {
+export const circuitsFactory = (token) => {
+    const request = requestFactory(token) 
 
- const result = await request.get(baseUrl)
- 
- const circuits = Object.values(result);
+    const getAllCircuits =  async () => {
+    
+     const result = await request.get(baseUrl)
+     
+     const circuits = Object.values(result);
+    
+     return circuits
+}
 
-//  console.log(circuits)
+return {
+    getAllCircuits
+}
 
- return circuits
 
 }

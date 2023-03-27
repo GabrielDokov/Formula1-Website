@@ -1,9 +1,12 @@
 import { useEffect, useState  } from "react";
 import { useParams,useNavigate } from "react-router-dom"
 import './DriverDetails.css';
-import * as driverServices from '../../services/driverServices';
+import {driverServiceFactory} from '../../services/driverServices';
 // import Modal from "./ModalDrivers";
 // import ModalDrivers from "./ModalDrivers";
+import { useService } from "../../hooks/useService";
+
+// const driverServices = useService(driverServiceFactory)
 
 
 
@@ -17,12 +20,13 @@ function DriverDetails(){
     const [driver, setDriver] = useState({})
 
     // const [modal, setModal] = useState(false)
+    const driverServices = useService(driverServiceFactory)
 
 
 
     useEffect(() => {
 
-        driverServices.getOne(driverId)
+      driverServices.getOne(driverId)
         .then(result => {
             setDriver(result)
         })
@@ -34,15 +38,19 @@ function DriverDetails(){
     //DELETE LOGIC NEED TO BE FINISHED
 
     const navigaion = useNavigate();
-    const onDeleteDriver = () => {
-      driverServices.delOne(driverId)
-      .then(result => {
-        setDriver(result)
-        navigaion('/drivers')
-      })
-  
 
+    const onDeleteDriver = () => {
+     
+       
+        driverServices.delOne(driverId)
+        .then(result => {
+          setDriver(result)
+          navigaion('/drivers')
+        })
+     
     }
+  
+    
 
 
 

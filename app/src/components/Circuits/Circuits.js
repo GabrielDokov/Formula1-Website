@@ -1,14 +1,17 @@
 import Accordion from "react-bootstrap/Accordion";
 import { useState, useEffect } from "react";
-import * as circuitServices from "../../services/circuitServices";
+import {circuitsFactory} from "../../services/circuitServices";
 
 import './Circuits.css'
+import { useService } from "../../hooks/useService";
 
 function Circuits() {
   const [circuits, setCurtuits] = useState([]);
 
+  const circuitsDetails  = useService(circuitsFactory)
+
   useEffect(() => {
-    circuitServices.getAllCircuits()
+    circuitsDetails.getAllCircuits()
     .then((result) => {
       setCurtuits(result);
       // console.log(result);
@@ -38,7 +41,7 @@ function Circuits() {
             </div>
 
             <div>
-              <img  class='circuitImg' src={c.Location.imageUrl} alt="CircuitsImg"></img>
+              <img  className='circuitImg' src={c.Location.imageUrl} alt="CircuitsImg"></img>
             </div>
             </div>
         

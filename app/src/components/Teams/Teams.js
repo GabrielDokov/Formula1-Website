@@ -1,15 +1,19 @@
 import './Teams.css'
 import { useState, useEffect } from "react";
-import * as teamService from "../../services/teamServices";
+import {TeamFactory} from "../../services/teamServices";
 import { Link } from 'react-router-dom'
+import { useService } from '../../hooks/useService';
 
 function Teams() {
   const [teams, setTeams] = useState([]);
 
+  const teamServices = useService(TeamFactory)
+
   
 
   useEffect(() => {
-    teamService.getAllTeams().then((result) => {
+    teamServices.getAllTeams()
+    .then((result) => {
       setTeams(result);
     });
   }, []);

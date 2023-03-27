@@ -1,12 +1,15 @@
 import './TeamDetails.css'
-import * as teamServices from '../../services/teamServices'
+import {TeamFactory} from '../../services/teamServices'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useService } from '../../hooks/useService';
 
 function TeamDetails(){
 
     const  { teamId } = useParams();
     console.log(teamId)
+
+    const teamServices = useService(TeamFactory)
 
     const [team, setTeam] = useState({});
 

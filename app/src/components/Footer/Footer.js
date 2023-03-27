@@ -38,7 +38,7 @@ function Footer(){
     <div className="follow">
         <li>Follow us on</li>
         <div className="icons">
-            <li><i className="fa-brands fa-facebook-f"></i></li>
+            <li><a href='/dsds'><i className="fa-brands fa-facebook-f"></i></a></li>
             <li><i className="fa-brands fa-instagram"></i></li>
             <li><i className="fa-brands fa-twitter"></i></li>
         </div>
