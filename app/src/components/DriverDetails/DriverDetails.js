@@ -1,12 +1,14 @@
-import { useEffect, useState  } from "react";
-import { useParams,useNavigate } from "react-router-dom"
+import { useEffect, useState , useContext } from "react";
+import { useParams,useNavigate, Link } from "react-router-dom"
 import './DriverDetails.css';
 import {driverServiceFactory} from '../../services/driverServices';
-// import Modal from "./ModalDrivers";
-// import ModalDrivers from "./ModalDrivers";
-import { useService } from "../../hooks/useService";
 
-// const driverServices = useService(driverServiceFactory)
+import { useService } from "../../hooks/useService";
+import { AuthContext } from "../../contexts/AuthContext";
+
+
+
+
 
 
 
@@ -16,10 +18,10 @@ import { useService } from "../../hooks/useService";
 function DriverDetails(){
 
     const  { driverId } = useParams();
-   
     const [driver, setDriver] = useState({})
+    const {userId} = useContext(AuthContext);
 
-    // const [modal, setModal] = useState(false)
+
     const driverServices = useService(driverServiceFactory)
 
 
@@ -33,27 +35,19 @@ function DriverDetails(){
 
     },[driverId])
 
-
-
-    //DELETE LOGIC NEED TO BE FINISHED
-
     const navigaion = useNavigate();
-
+    
     const onDeleteDriver = () => {
-     
-       
+      let config = window.confirm('Are you sure you want to delete this driver?');
+      if(config){
         driverServices.delOne(driverId)
-        .then(result => {
-          setDriver(result)
-          navigaion('/drivers')
-        })
+        navigaion('/drivers')
+      }
      
+      
     }
   
     
-
-
-
     const onUpdateDriver = () => {
       console.log('clicked')
       // driverServices.putOne(driverId).
@@ -71,7 +65,7 @@ function DriverDetails(){
         <>
 
 
-<div className="card">
+<div className="card" key={driver.driverId} >
   <img src={driver.imageURL} alt="Avatar" />
   <div className="container">
     <h4><b>{driver.givenName} {driver.familyName}</b></h4>
@@ -83,8 +77,12 @@ function DriverDetails(){
     <p><b>Driver Code</b>: {driver.code}</p>
   </div>
 
-    <button className="edit" onClick={onUpdateDriver}>EDIT</button>
+   {driver._ownerId === userId && (
+  <>
+    <Link to={`/drivers/${driver._id}/edit`} className="edit" onClick={onUpdateDriver}>EDIT</Link>
     <button  className="delete" onClick={onDeleteDriver}>Delete</button>
+  </>
+)}
   </div>
 </div> 
 

@@ -8,6 +8,7 @@ import Circuits from "./components/Circuits/Circuits";
 import Teams from "./components/Teams/Teams";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import CreateDriver from "./components/CreateDriver/CreateDriver";
+import DriverEdit from "./components/DriverEdit/DriverEdit";
 
 import  {driverServiceFactory} from './services/driverServices'
 
@@ -43,7 +44,7 @@ function App() {
 
 
 
-  console.log(driverServices)
+  // console.log(driverServices)
 
 
   const navigate = useNavigate();
@@ -77,8 +78,7 @@ function App() {
   }
 
   const onLogout = async () => {
-    // AuthService.logout();
-    
+    authService.logout();
     setAuth({});
 
     //NEED TO BE DONE!!!
@@ -111,6 +111,7 @@ function App() {
           <Route path="/drivers" element={ <Drivers></Drivers>} ></Route>
           <Route path='/create-driver' element={<CreateDriver onCreateDriverSubmit={onCreateDriverSubmit}></CreateDriver>}></Route>
           <Route path="/drivers/:driverId" element={<DriverDetails></DriverDetails>}></Route>
+          <Route path="/drivers/:driverId/edit" element={<DriverEdit></DriverEdit>}></Route>
           <Route path='/teams/:teamId' element={<TeamDetails></TeamDetails>}></Route>
           <Route path='/login' element={<Login ></Login>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>

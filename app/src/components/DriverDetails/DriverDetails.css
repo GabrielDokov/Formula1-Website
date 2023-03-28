@@ -42,7 +42,31 @@ img{
 }
 
 .edit{
-    margin-right: 26px;
+    margin-right: 34px;
+    border: 2px solid #e10600;
+    border-radius: 50px;
+    height: 30px;
+    padding: 6px 60px;
+    text-decoration: none;
+    color: #e10600;
+    /* height: 37px; */
+   
+}
+
+.edit:hover{
+    background-color: #e10600;
+    color: #ffffff;
+}
+
+.delete{
+    /* margin-right: 26px; */
+    color: #e10600;
+    background-color: #ffffff;
+}
+
+.delete:hover{
+    background-color: #e10600;
+    color: #ffffff;
 }
 
 .driverItems b {
