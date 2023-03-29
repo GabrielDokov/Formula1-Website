@@ -22,6 +22,9 @@ import {authServiceFactory} from './services/authServices'
 
 import Login from "./components/Login/Login";
 import Logout from "./components/Logout/Logout";
+// import ScrollUp from "./components/ScrollUp";
+// import { GameContext } from "./contexts/GameContext";
+import { DriverContext } from "./contexts/DriverContext";
 
 
 
@@ -42,17 +45,11 @@ function App() {
   const driverServices = driverServiceFactory(auth.accessToken)
   const authService = authServiceFactory(auth.accessToken)
 
-
-
-
-  // console.log(driverServices)
-
-
   const navigate = useNavigate();
+
+
   const onCreateDriverSubmit = async (data) => {
    const newDriver = await driverServices.create(data);
-   console.log(data)
-   console.log(newDriver);
    navigate('/drivers')
   }
 
@@ -62,10 +59,8 @@ function App() {
   const onLoginSubmit = async (data) => {
   const result =  await authService.login(data);
    setAuth(result);
-
    navigate('/')
   
-      // console.log(result);
   }
 
   const onRegisterSumbit = async(data) => {
@@ -83,15 +78,14 @@ function App() {
   const onLogout = async () => {
     authService.logout();
     setAuth({});
-
-    //NEED TO BE DONE!!!
   }
 
-  const onEditDriverSubmit = async (values) => {
-    const result =  await driverServices.edit(values);
-    console.log(values._id)
+  const onEditDriverSubmit = async (data) => {
+    const result = await driverServices.editOne(data);
     console.log(result)
-    // navigate(`/drivers/${values._id}`)
+
+   navigate('/')
+
   }
 
 
@@ -113,6 +107,7 @@ function App() {
   return (
     
 <AuthContext.Provider value={context}>
+  <DriverContext.Provider value={context}>
     <Navigation></Navigation> 
       <Routes>
           <Route path="/" element={<Header></Header>}></Route>
@@ -121,13 +116,14 @@ function App() {
           <Route path="/drivers" element={ <Drivers></Drivers>} ></Route>
           <Route path='/create-driver' element={<CreateDriver onCreateDriverSubmit={onCreateDriverSubmit}></CreateDriver>}></Route>
           <Route path="/drivers/:driverId" element={<DriverDetails></DriverDetails>}></Route>
-          <Route path="/drivers/:driverId/edit" element={<DriverEdit onEditDriverSubmit={onEditDriverSubmit}></DriverEdit>}></Route>
           <Route path='/teams/:teamId' element={<TeamDetails></TeamDetails>}></Route>
           <Route path='/login' element={<Login ></Login>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
           <Route path='/logout' element={<Logout></Logout>}></Route>
+          <Route path="/drivers/:driverId/edit" element={<DriverEdit onEditDriverSubmit={onEditDriverSubmit}></DriverEdit>}></Route>
       </Routes>
     <Footer></Footer>
+  </DriverContext.Provider>
 </AuthContext.Provider>
     
   );

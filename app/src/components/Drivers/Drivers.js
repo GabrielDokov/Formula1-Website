@@ -9,12 +9,13 @@ function Main(){
 
     const [drivers, setDrivers] = useState([]);
 
-    const driverInfo = useService(driverServiceFactory)
+
+    const driverService = useService(driverServiceFactory)
 
 
     useEffect(() => {
   
-      driverInfo.getAll()
+      driverService.getAll()
       .then(result => {
         setDrivers(result);
         // console.log(result)
@@ -39,10 +40,9 @@ function Main(){
             
                 <div className="boxes" key={d.driverId}>
                 <img src={d.imageURL} className="boximg" alt="DriversImage"/>
-
                 <h2>{d.givenName} {d.familyName}</h2>
 
-                   <Link className='LinkDrivers' to={`/drivers/${d._id}`}>Details</Link>
+                <Link className='LinkDrivers' to={`/drivers/${d._id}`}>Details</Link>
 
                 </div>)}
 

@@ -47,9 +47,7 @@ function DriverDetails(){
       
     }
   
-    const edit = () => {
-      
-    }
+
 
 
     return(
