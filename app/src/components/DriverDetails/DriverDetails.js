@@ -47,19 +47,10 @@ function DriverDetails(){
       
     }
   
-    
-    const onUpdateDriver = () => {
-      console.log('clicked')
-      // driverServices.putOne(driverId).
-      // then(result => {
-      //   console.log(result)
-      }
-    
-     
+    const edit = () => {
+      
+    }
 
-
-
-  
 
     return(
         <>
@@ -79,7 +70,7 @@ function DriverDetails(){
 
    {driver._ownerId === userId && (
   <>
-    <Link to={`/drivers/${driver._id}/edit`} className="edit" onClick={onUpdateDriver}>EDIT</Link>
+    <Link to={`/drivers/${driver._id}/edit`} className="edit">EDIT</Link>
     <button  className="delete" onClick={onDeleteDriver}>Delete</button>
   </>
 )}

@@ -12,9 +12,14 @@ export const useForm = (initialValues,onSubmitHandler) => {
         onSubmitHandler(values)
     }
 
+    const changeEdit = (newValues) => {
+        setValues(newValues)
+    }
+
     return {
         values,
         changeHandler,
         onSubmit,
+        changeEdit,
     }
 }

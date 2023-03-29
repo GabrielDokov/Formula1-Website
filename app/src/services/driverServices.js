@@ -13,8 +13,7 @@ export const driverServiceFactory = (token) => {
         const result = await request.get(baseUrl)
         const drivers = Object.values(result);
         return drivers
-       
-       }
+     }
        
         const create = async (driverData) => {
            const result = await request.post(baseUrl,driverData);
@@ -36,11 +35,11 @@ export const driverServiceFactory = (token) => {
            return result
        }
        
-        const putOne = async(driverId) => {
-           const result = await request.put(`${baseUrl}/${driverId}`);
-           console.log(result);
-           return result;
-       }
+    //     const putOne = async(driverId) => {
+    //        const result = await request.put(`${baseUrl}/${driverId}`);
+    //        console.log(result);
+    //        return result;
+    //    }
        
         const edit = async(driverData,driverId) => {
            const result = await request.put(`${baseUrl}/${driverId}`, driverData);
@@ -53,7 +52,6 @@ export const driverServiceFactory = (token) => {
         create,
         getOne,
         delOne,
-        putOne,
-        edit
+        edit,
        }
 }
