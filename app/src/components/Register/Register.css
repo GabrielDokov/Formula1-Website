@@ -1,12 +1,17 @@
 .registerBtn{
     width: 45%;
     height: 37px;
-    background-color:#e10600;
-    color: white;
+    background-color:#ffffff;
+    color: #e10600;
     opacity: unset;
     font-weight: 600;
     font-size: 14px;
     margin: 20px;
+}
+
+.registerBtn:hover{
+    background-color: #e10600;
+    color: #ffffff;
 }
 
 input{

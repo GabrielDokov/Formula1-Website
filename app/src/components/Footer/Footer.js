@@ -16,10 +16,10 @@ function Footer(){
 
     <div className="footerfirst">
         <ul className="footlist">
-            <li>Tour packages</li>
-            <li>Personalized offers</li>
-            <li>Special deals</li>
-            <li>Summer holiday</li>
+            <li>Home</li>
+            <li>Circuits</li>
+            <li>Teams</li>
+            <li>Drivers</li>
         </ul>
     </div>
 
@@ -38,15 +38,13 @@ function Footer(){
     <div className="follow">
         <li>Follow us on</li>
         <div className="icons">
-            <li><a href='/dsds'><i className="fa-brands fa-facebook-f"></i></a></li>
-            <li><i className="fa-brands fa-instagram"></i></li>
-            <li><i className="fa-brands fa-twitter"></i></li>
+            <li><a className='social' href='/https://www.facebook.com/Formula1'><i className="fa-brands fa-facebook-f"></i></a></li>
+            <li><a  className='social'href='https://www.instagram.com/f1/?hl=bg'><i className="fa-brands fa-instagram"></i></a></li>
+            <li><a  className='social'href='https://twitter.com/F1'><i className="fa-brands fa-twitter"></i></a> </li>
         </div>
     </div>
 
-    
 
-    
 </footer>
 
 <div className='rights'>

@@ -69,7 +69,7 @@ function CreateDriver({
             <label className='label' htmlFor="confirm-password">Code</label>
             <input type="text" className="details" name="code" placeholder='ALO' value={values.code} onChange={onChangeHandler}/>
            
-            <button type='submit'>Add Driver</button>
+            <button className='addBtn' type='submit'>Add Driver</button>
         </div>
     </form>
 

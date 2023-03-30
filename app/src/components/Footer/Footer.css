@@ -75,3 +75,12 @@
     color: #fff;
     text-decoration: underline;
   }
+
+  li>a{
+    text-decoration: none;
+    color: #ffffff
+  }
+
+ .social:hover{
+  color: #ffffff;
+ }
