@@ -46,6 +46,13 @@ function DriverDetails(){
      
       
     }
+
+    // const [like, setLike] = useState(0)
+
+    // const onLike = () => {
+    //   setLike(like+1);
+
+    // }
   
 
 
@@ -65,6 +72,7 @@ function DriverDetails(){
     <p><b>Date of Birth</b>: {driver.dateOfBirth}</p>
     <p><b>Driver Code</b>: {driver.code}</p>
   </div>
+
 
    {driver._ownerId === userId && (
   <>

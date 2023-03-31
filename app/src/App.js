@@ -25,6 +25,7 @@ import Logout from "./components/Logout/Logout";
 // import ScrollUp from "./components/ScrollUp";
 // import { GameContext } from "./contexts/GameContext";
 import { DriverContext } from "./contexts/DriverContext";
+import TeamEdit from "./components/TeamEdit/TeamEdit";
 
 
 
@@ -121,6 +122,7 @@ function App() {
           <Route path='/register' element={<Register></Register>}></Route>
           <Route path='/logout' element={<Logout></Logout>}></Route>
           <Route path="/drivers/:driverId/edit" element={<DriverEdit onEditDriverSubmit={onEditDriverSubmit}></DriverEdit>}></Route>
+          <Route path="/teams/:teamId/edit" element={<TeamEdit></TeamEdit>}></Route>
       </Routes>
     <Footer></Footer>
   </DriverContext.Provider>

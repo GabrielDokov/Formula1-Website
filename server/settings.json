@@ -279,6 +279,132 @@
             
 
             
+        },
+
+        "teams":{
+
+            "0":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "constructorId": "alfa",
+                "url": "http://en.wikipedia.org/wiki/Alfa_Romeo_in_Formula_One",
+                "name": "Alfa Romeo",
+                "nationality": "Swiss",
+                "imageUrl": "https://cdn.shopify.com/s/files/1/0269/9827/6168/collections/alfa_20romeo_20racing_20f1_20team_20merchandise_20canada_20usa_20store_20.jpg?v=1637772076",
+                "driver1" : "Valtteri Bottas",
+                "driver2" : "Zhou Guanyu",
+                "reserveDriver": "Theo Pourchaire",
+                "_id": "0"
+            },
+            "1":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "constructorId": "alphatauri",
+                "url": "http://en.wikipedia.org/wiki/Scuderia_AlphaTauri",
+                "name": "AlphaTauri",
+                "nationality": "Italian",
+                "imageUrl": "https://cdn-7.motorsport.com/images/mgl/Y99JQR8Y/s8/scuderia-alphatauri-f1-logo-1.jpg",
+                "driver1" : "Nyck de Vries",
+                "driver2" : "Yuki Tsunoda",
+                "reserveDriver": "Still doesn,t have",
+                "_id": "1"
+            },
+            "2":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "constructorId": "alpine",
+                "url": "http://en.wikipedia.org/wiki/Alpine_F1_Team",
+                "name": "Alpine F1 Team",
+                "nationality": "French",
+                "imageUrl": "https://d3cm515ijfiu6w.cloudfront.net/wp-content/uploads/2021/02/10131341/Alpine-Academy.jpg",
+                "driver1" : "Esteban Ocon",
+                "driver2" : "Peirre Gasly",
+                "reserveDriver": "Jack Doohan",
+                "_id": "2"
+            },
+            "3":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "constructorId": "aston_martin",
+                "url": "http://en.wikipedia.org/wiki/Aston_Martin_in_Formula_One",
+                "name": "Aston Martin",
+                "nationality": "British",
+                "imageUrl": "https://d3cm515ijfiu6w.cloudfront.net/wp-content/uploads/2021/01/01082241/Aston-Martin.jpg",
+                "driver1" : "Fernando Alonso",
+                "driver2" : "Lance Stroll",
+                "reserveDriver": "Felipe Drugovich",
+                "_id": "3"
+            },
+            "4": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "constructorId": "ferrari",
+                "url": "http://en.wikipedia.org/wiki/Scuderia_Ferrari",
+                "name": "Ferrari",
+                "nationality": "Italian",
+                "imageUrl": "https://cdn.ferrari.com/cms/network/media/img/resize/6373a38d0d6e6d0022cb67ff?width=768&height=430",
+                "driver1" : "Charles Leclerc",
+                "driver2" : "Carlos Sainz Jr.",
+                "reserveDriver": "Antonio Giovinazzi",
+                "_id": "4"
+            },
+            "5":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "constructorId": "haas",
+                "url": "http://en.wikipedia.org/wiki/Haas_F1_Team",
+                "name": "Haas F1 Team",
+                "nationality": "American",
+                "imageUrl": "https://wallpapercave.com/wp/wp4448660.png",
+                "driver1" : "Kevin Magnussen",
+                "driver2" : "Nico Hülkenberg",
+                "reserveDriver": "Pietro Fittipaldi",
+                "_id": "5"
+            },
+            "6":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "constructorId": "mclaren",
+                "url": "http://en.wikipedia.org/wiki/McLaren",
+                "name": "McLaren",
+                "nationality": "British",
+                "imageUrl": "https://w0.peakpx.com/wallpaper/588/500/HD-wallpaper-mclaren-f1-formula-1-logo-artwork-racing-sports.jpg",
+                "driver1" : "Oscar Piastri",
+                "driver2" : "Lando Norris",
+                "reserveDriver": "Alex Palou",
+                "_id": "6"
+        
+            },
+            "7":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "constructorId": "mercedes",
+                "url": "http://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One",
+                "name": "Mercedes",
+                "nationality": "German",
+                "imageUrl": "https://i.pinimg.com/originals/a2/8a/4a/a28a4a28b62a4b6a27b65699755ad1b6.png",
+                "driver1" : " Lewis Hamilton",
+                "driver2" : " George Russell",
+                "reserveDriver": "Mick Schumacher",
+                "_id": "7"
+            },
+            "8":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "constructorId": "red_bull",
+                "url": "http://en.wikipedia.org/wiki/Red_Bull_Racing",
+                "name": "Red Bull",
+                "nationality": "Austrian",
+                "imageUrl": "https://cdn-2.motorsport.com/images/mgl/Y99JQRbY/s8/red-bull-racing-logo-1.jpg",
+                "driver1" : "Sergio Perez",
+                "driver2" : " Max Verstappen",
+                "reserveDriver": "Daniel Ricciardo",
+                "_id": "8"
+            },
+            "9":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "constructorId": "williams",
+                "url": "http://en.wikipedia.org/wiki/Williams_Grand_Prix_Engineering",
+                "name": "Williams",
+                "nationality": "British",
+                "imageUrl": "https://cdn.sanity.io/images/fnx611yr/production/ff454bb2b4adb541b66477adcb49088f8de0fb4a-2400x2400.jpg?rect=0,572,2400,1256&w=1200&h=628&auto=format",
+                "driver1" : "Alex Albon",
+                "driver2" : " Logan Sargeant",
+                "reserveDriver": "Still doesn,t have",
+                "_id": "9"
+            }
+            
         }
         
     },

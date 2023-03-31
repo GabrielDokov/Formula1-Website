@@ -65,3 +65,25 @@
   
   }
 
+  /* .buttonsDriver{
+    display: flex;
+    flex-direction: row;
+  justify-content: space-between;
+  }
+
+
+  .like{
+    width: 50px;
+    border-radius: 50%;
+  
+  }
+
+  .dislike{
+    width: 50px;
+  }
+
+  .like i{
+    margin: 10px;
+
+  }
+   */
