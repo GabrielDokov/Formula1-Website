@@ -121,7 +121,7 @@ function App() {
           <Route path='/login' element={<Login ></Login>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
           <Route path='/logout' element={<Logout></Logout>}></Route>
-          <Route path="/drivers/:driverId/edit" element={<DriverEdit onEditDriverSubmit={onEditDriverSubmit}></DriverEdit>}></Route>
+          <Route path="/drivers/:driverId/edit" element={<DriverEdit></DriverEdit>}></Route>
           <Route path="/teams/:teamId/edit" element={<TeamEdit></TeamEdit>}></Route>
       </Routes>
     <Footer></Footer>

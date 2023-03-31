@@ -5,9 +5,7 @@ import { useService } from "../../hooks/useService";
 import { driverServiceFactory } from "../../services/driverServices";
 // import { GameContext } from "../../contexts/GameContext"
 
-function DriverEdit({
-    onEditDriverSubmit,
-}){
+function DriverEdit(){
 
 
 
@@ -23,7 +21,7 @@ function DriverEdit({
         .then(result => {
             setCurrentDriver(result)
         })
-     },[])
+     },[driverId])
 
 
      const Submit = (e) => {
