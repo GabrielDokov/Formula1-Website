@@ -43,16 +43,18 @@ function TeamDetails(){
         <div className="card">
   <img src={team.imageUrl} alt="Avatar" />
   <div className="container">
-    <h4><b>{team.name} </b></h4>
+          <h4><b>{team.name} </b></h4>
 
-    <div className='teamDetails'>
+        <div className='teamDetails'>
 
-    <p><b>Nationality</b>:  {team.nationality}</p>
-    <p><b>Driver 1</b>:  {team.driver1} </p>
-    <p><b>Driver 2</b>:  {team.driver2} </p>
-    <p><b>Reserved Driver</b>:  {team.reserveDriver}</p>
+           <p><b>Nationality</b>:  {team.nationality}</p>
+          <p><b>Driver 1</b>:  {team.driver1} </p>
+          <p><b>Driver 2</b>:  {team.driver2} </p>
+          <p><b>Reserved Driver</b>:  {team.reserveDriver}</p>
 
-    {team._ownerId === userId && (
+        </div>
+
+          {team._ownerId === userId && (
         
           <>
           <Link to={`/teams/${team._id}/edit`} className="edit">EDIT</Link>
@@ -60,7 +62,6 @@ function TeamDetails(){
           </>
         )}
 
-    </div>
   </div>
 </div> 
 

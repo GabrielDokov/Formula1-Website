@@ -32,6 +32,26 @@ img{
     
 }
 
+.dri{
+    display: flex;
+    flex-direction: row;
+}
+
+.like{
+   position: absolute;
+   bottom: 160px;
+   right: 50px;
+   width: 40px;
+   border-radius: 50%;
+   margin: 10px;
+}
+.like:focus{
+   background-color: #e10600;
+   color: #ffffff;
+}
+
+
+
 .container{
     margin: 20px 0px;
     

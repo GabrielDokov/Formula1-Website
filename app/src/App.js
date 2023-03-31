@@ -22,16 +22,12 @@ import {authServiceFactory} from './services/authServices'
 
 import Login from "./components/Login/Login";
 import Logout from "./components/Logout/Logout";
-// import ScrollUp from "./components/ScrollUp";
-// import { GameContext } from "./contexts/GameContext";
+
 import { DriverContext } from "./contexts/DriverContext";
 import TeamEdit from "./components/TeamEdit/TeamEdit";
 
 
 
-// import {useService} from "./hooks/useService";
-
-//import {driverServiceFactory} from './services/driverServices'
 
 
 

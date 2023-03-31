@@ -66,13 +66,21 @@ function DriverDetails(){
   <div className="container">
     <h4><b>{driver.givenName} {driver.familyName}</b></h4>
 
-    <div className="driverItems">
-    <p><b>Nationality</b>: {driver.nationality}</p>
-    <p><b>Driver Number</b>: {driver.permanentNumber}</p>
-    <p><b>Date of Birth</b>: {driver.dateOfBirth}</p>
-    <p><b>Driver Code</b>: {driver.code}</p>
-  </div>
 
+    <div className="dri">
+
+       <div className="driverItems">
+         <p><b>Nationality</b>: {driver.nationality}</p>
+         <p><b>Driver Number</b>: {driver.permanentNumber}</p>
+         <p><b>Date of Birth</b>: {driver.dateOfBirth}</p>
+         <p><b>Driver Code</b>: {driver.code}</p>
+      </div>
+  
+        <div >
+         <button className="like"><i class="fa-solid fa-heart"></i></button>
+        </div>
+
+    </div>
 
    {driver._ownerId === userId && (
   <>
