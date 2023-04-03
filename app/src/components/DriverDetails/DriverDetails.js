@@ -47,12 +47,12 @@ function DriverDetails(){
       
     }
 
-    // const [like, setLike] = useState(0)
+    const [like, setLike] = useState(0)
 
-    // const onLike = () => {
-    //   setLike(like+1);
+    const onLike = () => {
 
-    // }
+
+    }
   
 
 
@@ -77,7 +77,7 @@ function DriverDetails(){
       </div>
   
         <div >
-         <button className="like"><i class="fa-solid fa-heart"></i></button>
+         <button onClick={onLike} className="like"><i className="fa-solid fa-heart">{driver.like}</i></button>
         </div>
 
     </div>

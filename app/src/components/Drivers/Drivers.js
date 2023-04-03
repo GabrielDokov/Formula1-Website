@@ -18,7 +18,7 @@ function Main(){
       driverService.getAll()
       .then(result => {
         setDrivers(result);
-        // console.log(result)
+        //  console.log(result)
     
       })
   
@@ -48,19 +48,6 @@ function Main(){
                 <h2>{d.givenName} {d.familyName}</h2>
 
                 <Link className='LinkDrivers' to={`/drivers/${d._id}`}>Details</Link>
-                {/* <div className='buttonsDriver'> */}
-
-                  {/* <button className='like' onClick={onLike}>
-                     <i class="fa-solid fa-thumbs-up"></i>
-                     {like}
-                  </button> */}
-
-
-                {/* <button className='dislike'>
-                <i class="fa-solid fa-thumbs-down"></i>
-                </button> */}
-
-                {/* </div> */}
 
 
                 </div>)}

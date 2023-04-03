@@ -105,3 +105,9 @@ button {
     font-size: 14px;
 }
 
+.alert{
+    color: #e10600;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+}

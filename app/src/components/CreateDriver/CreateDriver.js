@@ -1,10 +1,13 @@
 import './CreateDriver.css'
 import {useState} from 'react';
 // import * as driverServices from './services/driverServices'
+import {useForm} from 'react-hook-form'
 
 function CreateDriver({
     onCreateDriverSubmit
 }){
+
+    const {register, formState:{errors}, handleSubmit} = useForm();
 
 
     const [values, setValues] = useState({
@@ -25,9 +28,41 @@ function CreateDriver({
     }
 
     const onSubmit = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         onCreateDriverSubmit(values)
+        
+        // if(values.givenName === ''){
+        //     alert('Please enter the name!')
+        // }else if(values.familyName === ''){
 
+
+        //     alert('Please enter Family Name!')
+        // }else if (values.nationality === ''){
+
+        //     alert('Please enter nationality!')
+        // }else if(values.permanentNumber === ''){
+
+        //     alert('Please enter Permanent Number!')
+        // }else if(values.code === ''){
+
+        //     alert('Please enter Racing Code');
+        // }else if(values.givenName.length <= 1 ){
+
+        //     alert('The name must contain at least 2 characters')
+
+        // }else if(!values.imageURL.startsWith('https://')){
+        //     alert('Please enter valid URL')
+        // }
+        
+        // else{
+
+        //     
+        // }
+        
+        // if(values.familyName === ''){
+        //     alert('Please enter the family name') 
+        // }
+        
     }
     
 
@@ -38,7 +73,7 @@ function CreateDriver({
          <>
          <section>
 
-        <form onSubmit={onSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
         <div className="main">
             <header>
                 <h2 className='driverTitle'>Create Driver</h2>
@@ -46,28 +81,58 @@ function CreateDriver({
             <div className="common">
                 <div className="first">
                     <label className='label' htmlFor="givenName">First Name</label>
-                    <input type="text" className="name" name="givenName" placeholder='Fernando' value={values.givenName} onChange={onChangeHandler}/>
+                    <input type="text" className="name" 
+                    {...register("givenName",{required:true, minLength:3, maxLength:15})} aria-invalid={errors.givenName ? "true" : "false"} 
+                    placeholder='Fernando' value={values.givenName} onChange={onChangeHandler}/>
+                    {errors.givenName?.type=== 'required' && <p className='alert' role='alert'> First name is required!</p>}
                 </div>
+
+
                 <div class="last">
                     <label className='label' htmlFor="familyName">Last Name</label>
-                    <input type="text" className="name" name="familyName" placeholder='Alonso' value={values.familyName} onChange={onChangeHandler} />
+                    <input type="text" className="name" name="familyName" 
+                    {...register("familyName",{required:true, minLength:3, maxLength:15})} aria-invalid={errors.familyName ? "true" : "false"} 
+                     placeholder='Alonso' value={values.familyName} onChange={onChangeHandler} />
+                     {errors.familyName?.type=== 'required' && <p  className='alert' role='alert'> Family name is required</p>}
                 </div>
             </div>
 
             <label className='label' htmlFor="nationality">Nationality</label>
-            <input type="text" className="details" name="nationality" placeholder='Spanish' value={values.nationality} onChange={onChangeHandler}/>
+            <input type="text" className="details" name="nationality" 
+            {...register("nationality",{required:true, minLength:3, maxLength:15})} aria-invalid={errors.nationality ? "true" : "false"} 
+            placeholder='Spanish' value={values.nationality} onChange={onChangeHandler}/>
+             {errors.nationality?.type=== 'required' && <p  className='alert' role='alert'> Nationality is required!</p>}
 
-            <label className='label' htmlFor="password">Permanent Number</label>
-            <input type="number" className="details" name="permanentNumber" placeholder='14' value={values.permanentNumber} onChange={onChangeHandler}/>
 
-            <label className='label' htmlFor="confirm-password">ImageUrl</label>
-            <input type="text" className="details" name="imageURL" value={values.imageURL}  onChange={onChangeHandler}/>
+
+            <label className='label' htmlFor="permanentNumber">Permanent Number</label>
+            <input type="number" className="details" name="permanentNumber"
+             {...register("permanentNumber",{required:true,minLength:1, maxLength:99})} aria-invalid={errors.permanentNumber ? "true" : "false"} 
+            placeholder='14' value={values.permanentNumber} onChange={onChangeHandler}/>
+             {errors.permanentNumber?.type === 'required' && <p  className='alert' role='alert'> Permanent Number is required!</p>}
+
+
+
+            <label className='label' htmlFor="imageURL">ImageUrl</label>
+            <input type="text" className="details" name="imageURL" 
+             {...register("imageURL",{required:true,})} aria-invalid={errors.imageURL ? "true" : "false"}
+             value={values.imageURL}  onChange={onChangeHandler}/>
+                {errors.imageURL?.type === 'required' && <p  className='alert' role='alert'> ImageUrl is required!</p>}
+
+
             
-            <label className='label' htmlFor="confirm-password">Date</label>
-            <input type="date" className="details" name="dateOfBirth"  value={values.dateOfBirth} onChange={onChangeHandler}/>
+            <label className='label' htmlFor="dateOfBirth">Date</label>
+            <input type="date" className="details" name="dateOfBirth" 
+            {...register("dateOfBirth",{required:true,})} aria-invalid={errors.dateOfBirth ? "true" : "false"}
+             value={values.dateOfBirth} onChange={onChangeHandler}/>
+              {errors.dateOfBirth?.type === 'required' && <p  className='alert' role='alert'> Data of birth is required!</p>}
 
-            <label className='label' htmlFor="confirm-password">Code</label>
-            <input type="text" className="details" name="code" placeholder='ALO' value={values.code} onChange={onChangeHandler}/>
+
+            <label className='label' htmlFor="code">Code</label>
+            <input type="text" className="details" name="code" 
+             {...register("code",{required:true,})} aria-invalid={errors.code ? "true" : "false"}
+             placeholder='ALO' value={values.code} onChange={onChangeHandler}/>
+               {errors.code?.type === 'required' && <p  className='alert' role='alert'> Code is required!</p>}
            
             <button className='addBtn' type='submit'>Add Driver</button>
         </div>
