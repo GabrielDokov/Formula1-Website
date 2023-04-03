@@ -28,41 +28,7 @@ function CreateDriver({
     }
 
     const onSubmit = (e) => {
-        // e.preventDefault();
         onCreateDriverSubmit(values)
-        
-        // if(values.givenName === ''){
-        //     alert('Please enter the name!')
-        // }else if(values.familyName === ''){
-
-
-        //     alert('Please enter Family Name!')
-        // }else if (values.nationality === ''){
-
-        //     alert('Please enter nationality!')
-        // }else if(values.permanentNumber === ''){
-
-        //     alert('Please enter Permanent Number!')
-        // }else if(values.code === ''){
-
-        //     alert('Please enter Racing Code');
-        // }else if(values.givenName.length <= 1 ){
-
-        //     alert('The name must contain at least 2 characters')
-
-        // }else if(!values.imageURL.startsWith('https://')){
-        //     alert('Please enter valid URL')
-        // }
-        
-        // else{
-
-        //     
-        // }
-        
-        // if(values.familyName === ''){
-        //     alert('Please enter the family name') 
-        // }
-        
     }
     
 
@@ -114,7 +80,7 @@ function CreateDriver({
 
 
             <label className='label' htmlFor="imageURL">ImageUrl</label>
-            <input type="text" className="details" name="imageURL" 
+            <input type="text" className="details" name="imageURL" placeholder='https://exampleURL.com'
              {...register("imageURL",{required:true,})} aria-invalid={errors.imageURL ? "true" : "false"}
              value={values.imageURL}  onChange={onChangeHandler}/>
                 {errors.imageURL?.type === 'required' && <p  className='alert' role='alert'> ImageUrl is required!</p>}

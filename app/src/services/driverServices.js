@@ -34,13 +34,7 @@ export const driverServiceFactory = (token) => {
            console.log(result)
            return result
        }
-       
-    //     const putOne = async(driverId) => {
-    //        const result = await request.put(`${baseUrl}/${driverId}`);
-    //        console.log(result);
-    //        return result;
-    //    }
-       
+           
         const editOne = async(driverId,driverData) => {
            const result = await request.put(`${baseUrl}/${driverId}`, driverData);
            console.log(result);

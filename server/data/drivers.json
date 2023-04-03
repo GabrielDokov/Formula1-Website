@@ -12,7 +12,8 @@
                     "familyName": "Albon",
                     "dateOfBirth": "1996-03-23",
                     "nationality": "Thai",
-                    "_id": "0"
+                    "_id": "0",
+                    "like": "0"
                 },
                 {
                     "driverId": "alonso",

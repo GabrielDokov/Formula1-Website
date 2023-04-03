@@ -42,8 +42,6 @@ function Login()
            <header>
                <h2 className='driverTitle'>Login</h2>
            </header>
-
-           {/* <img className='imgsign' src={logo} alt='f1logo'></img> */}
          
            <label className='label' >Email</label>
            <input type="email" className="details" name='username'
@@ -58,9 +56,10 @@ function Login()
             value={values.password}
             onChange={changeHandler} />
             {errors.password?.type === 'required' && <span className='alert' role='alert'> Password is required!</span>}
+
+
           
            <button className='loginBtn' type='submit'>Login</button>
-
            <p>
             <span className='span'>If you don't have a profile click <Link to="/register" className='link'>here</Link></span>
            </p>

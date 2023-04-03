@@ -17,13 +17,15 @@ function Main(){
   
       driverService.getAll()
       .then(result => {
+        // result.sort((a,b) => a.familyName - b.familyName)
         setDrivers(result);
         //  console.log(result)
     
       })
   
     },[])
-    
+
+
   
 
   
@@ -39,6 +41,8 @@ function Main(){
         <section className="main" >
 
          
+        
+        
  
 
             {drivers.map((d) => 

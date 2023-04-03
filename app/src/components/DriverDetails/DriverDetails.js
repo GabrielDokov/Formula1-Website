@@ -7,14 +7,6 @@ import { useService } from "../../hooks/useService";
 import { AuthContext } from "../../contexts/AuthContext";
 
 
-
-
-
-
-
-
-
-
 function DriverDetails(){
 
     const  { driverId } = useParams();
@@ -47,10 +39,9 @@ function DriverDetails(){
       
     }
 
-    const [like, setLike] = useState(0)
-
+    const [likes, setLike] = useState(0)
     const onLike = () => {
-
+      setLike(likes+1)
 
     }
   
@@ -77,7 +68,7 @@ function DriverDetails(){
       </div>
   
         <div >
-         <button onClick={onLike} className="like"><i className="fa-solid fa-heart">{driver.like}</i></button>
+         <button onClick={onLike} className="like"><i className="fa-solid fa-heart">{likes}</i></button>
         </div>
 
     </div>

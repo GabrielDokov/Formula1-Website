@@ -1,11 +1,19 @@
 import { useParams, useNavigate} from "react-router-dom"
-import { useForm } from "../../hooks/useForm"
 import { useContext, useEffect,useState } from "react";
 import { useService } from "../../hooks/useService";
 import { driverServiceFactory } from "../../services/driverServices";
 // import { GameContext } from "../../contexts/GameContext"
 
+// import {useForm} from 'react-hook-form'
+
 function DriverEdit(){
+
+
+
+    // const {register, formState:{errors}, handleSubmit} = useForm();
+
+
+    
 
 
 
@@ -20,6 +28,7 @@ function DriverEdit(){
         driverService.getOne(driverId)
         .then(result => {
             setCurrentDriver(result)
+            console.log(result)
         })
      },[driverId])
 
@@ -53,28 +62,42 @@ function DriverEdit(){
            <div className="common">
                <div className="first">
                    <label className='label' htmlFor="givenName">First Name</label>
-                   <input type="text" className="name" name="givenName" placeholder='Fernando' defaultValue={currentDriver.givenName} />
+                   <input type="text" className="name" name="givenName" placeholder='Fernando'
+                    defaultValue={currentDriver.givenName}
+                    // {...register("givenName",{required:true})} aria-invalid={errors.givenName ? "true" : "false"}
+                    />
+                    {/* {...errors.givenName?.type === 'required' && <span className='alert' role='alert'> Email is required!</span>} */}
+                   
                </div>
                <div className="last">
                    <label className='label' htmlFor="familyName">Last Name</label>
-                   <input type="text" className="name" name="familyName" placeholder='Alonso' defaultValue={currentDriver.familyName}  />
+                   <input type="text" className="name" name="familyName" placeholder='Alonso' 
+                   defaultValue={currentDriver.familyName} 
+                //    {...register("givenName",{required:true})} aria-invalid={errors.givenName ? "true" : "false"}
+                   /> 
+                     {/* {...errors.givenName?.type === 'required' && <span className='alert' role='alert'> Email is required!</span>} */}
                </div>
            </div>
 
            <label className='label' htmlFor="nationality">Nationality</label>
-           <input type="text" className="details" name="nationality" placeholder='Spanish' defaultValue={currentDriver.nationality} />
+           <input type="text" className="details" name="nationality" placeholder='Spanish'
+            defaultValue={currentDriver.nationality} />
 
            <label className='label' htmlFor="password">Permanent Number</label>
-           <input type="number" className="details" name="permanentNumber" placeholder='14' defaultValue={currentDriver.permanentNumber} />
+           <input type="number" className="details" name="permanentNumber" placeholder='14' 
+           defaultValue={currentDriver.permanentNumber} />
 
            <label className='label' htmlFor="confirm-password">ImageUrl</label>
-           <input type="text" className="details" name="imageURL" defaultValue={currentDriver.imageURL} />
+           <input type="text" className="details" name="imageURL" 
+           defaultValue={currentDriver.imageURL} />
            
            <label className='label' htmlFor="confirm-password">Date</label>
-           <input type="date" className="details" name="dateOfBirth"  defaultValue={currentDriver.dateOfBirth} />
+           <input type="date" className="details" name="dateOfBirth"  
+           defaultValue={currentDriver.dateOfBirth} />
 
            <label className='label' htmlFor="confirm-password">Code</label>
-           <input type="text" className="details" name="code" placeholder='ALO' defaultValue={currentDriver.code} />
+           <input type="text" className="details" name="code" placeholder='ALO' 
+           defaultValue={currentDriver.code} />
           
            <button type='submit'>Edit Driver</button>
        </div>
