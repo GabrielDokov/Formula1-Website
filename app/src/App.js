@@ -107,14 +107,10 @@ function App() {
     
 <AuthContext.Provider value={context}>
   <DriverContext.Provider value={context}>
-
     <Navigation></Navigation> 
       <Routes>
-
           <Route path="/" element={<Header></Header>}></Route>
-
           <Route element={<RouteGuard></RouteGuard>}>
-      
                 <Route path="/teams" element={<Teams></Teams>}></Route>
                 <Route path="/drivers" element={ <Drivers></Drivers>} ></Route>
                 <Route path='/create-driver' element={<CreateDriver onCreateDriverSubmit={onCreateDriverSubmit}></CreateDriver>}></Route>
@@ -124,18 +120,11 @@ function App() {
                 <Route path="/teams/:teamId/edit" element={<TeamEdit></TeamEdit>}></Route>
                 <Route path='/logout' element={<Logout></Logout>}></Route>
                <Route path="/circuits" element={<Circuits></Circuits>}></Route>
-      
           </Route> 
-
           <Route path='/login' element={<Login ></Login>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
-        <ScrollUp></ScrollUp>
-
-
-   
-    
-
+    <ScrollUp></ScrollUp>
     <Footer></Footer>
   </DriverContext.Provider>
 </AuthContext.Provider>

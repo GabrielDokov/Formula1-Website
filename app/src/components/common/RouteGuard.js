@@ -10,7 +10,7 @@ function RouteGuard({
     
     const  { isAuthenticated }= useContext(AuthContext);
 
-    console.log('route guard')
+    // console.log('route guard')
 
     if(!isAuthenticated){
      return <Navigate to='/login'></Navigate>
