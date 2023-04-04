@@ -25,7 +25,7 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
    <li>Register functionality</li>
    <li>Logged users can add Driver</li>
    <li>Logged users can Edit and Delete Driver</li>
-   <li>Logged Users can view information about Circuits</li>
+   <li>Logged Users can view information about Circuits,Teams,Drivers</li>
    <li>Only the Admin can make changes to the Teams</li>
 
    </ul>
@@ -99,6 +99,12 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
    ## Contributing
 
    Contributions to this Formula 1 website project are welcome. You can contribute by fixing bugs, adding new features, improving the design, or updating the content. To contribute, you need to fork this repository, make your changes, and create a pull request.
+
+   ## Used Information
+
+   <a href='http://ergast.com/mrd/'>Ergast Developer API</a>
+   <a href='https://www.formula1.com/'>Official Formula1 Website</a>
+   <a href='https://www.youtube.com/watch?v=YLFVD8xaD3U'>Driver Introduction Video</a>
 
 
 
