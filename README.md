@@ -10,7 +10,7 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 <li><a href="#features">Features</a></li>
 <li><a href="#Screenshots">Screenshots</a></li>
 <li><a href='#installation'>Installation</a></li>
-<li><a></a></li>
+<li><a href='#built-with'></a></li>
 <li><a></a></li>
 </details>
 
@@ -48,6 +48,10 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
    ### Cirtuits
    <img src='ScreenshotsF1/circuits.png'></img>
 
+   ### Logged Users View
+   <img src='ScreenshotsF1/homeJPG.png'></img>
+
+
 
     
 
@@ -78,6 +82,17 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
    ```sh
    npm start
    ```
+
+   ## Technologies
+
+   <ul>The project is using
+
+   <li>React</li>
+   <li>react-router</li>
+   <li>react-bootstrap</li>
+   <li>react-hook-form</li>
+   
+   </ul>
 
 
 
