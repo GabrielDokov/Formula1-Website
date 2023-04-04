@@ -25,6 +25,7 @@ import Logout from "./components/Logout/Logout";
 
 import { DriverContext } from "./contexts/DriverContext";
 import TeamEdit from "./components/TeamEdit/TeamEdit";
+import RouteGuard from "./components/common/RouteGuard";
 
 
 
@@ -108,17 +109,19 @@ function App() {
     <Navigation></Navigation> 
       <Routes>
           <Route path="/" element={<Header></Header>}></Route>
-          <Route path="/circuits" element={<Circuits></Circuits>}></Route>
-          <Route path="/teams" element={<Teams></Teams>}></Route>
-          <Route path="/drivers" element={ <Drivers></Drivers>} ></Route>
-          <Route path='/create-driver' element={<CreateDriver onCreateDriverSubmit={onCreateDriverSubmit}></CreateDriver>}></Route>
-          <Route path="/drivers/:driverId" element={<DriverDetails></DriverDetails>}></Route>
-          <Route path='/teams/:teamId' element={<TeamDetails></TeamDetails>}></Route>
+          <Route element={<RouteGuard></RouteGuard>}>
+                <Route path="/circuits" element={<Circuits></Circuits>}></Route>
+                <Route path="/teams" element={<Teams></Teams>}></Route>
+                <Route path="/drivers" element={ <Drivers></Drivers>} ></Route>
+                <Route path='/create-driver' element={<CreateDriver onCreateDriverSubmit={onCreateDriverSubmit}></CreateDriver>}></Route>
+                <Route path="/drivers/:driverId" element={<DriverDetails></DriverDetails>}></Route>
+                <Route path='/teams/:teamId' element={<TeamDetails></TeamDetails>}></Route>
+                <Route path="/drivers/:driverId/edit" element={<DriverEdit></DriverEdit>}></Route>
+                <Route path="/teams/:teamId/edit" element={<TeamEdit></TeamEdit>}></Route>
+                <Route path='/logout' element={<Logout></Logout>}></Route>
+          </Route>
           <Route path='/login' element={<Login ></Login>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
-          <Route path='/logout' element={<Logout></Logout>}></Route>
-          <Route path="/drivers/:driverId/edit" element={<DriverEdit></DriverEdit>}></Route>
-          <Route path="/teams/:teamId/edit" element={<TeamEdit></TeamEdit>}></Route>
       </Routes>
     <Footer></Footer>
   </DriverContext.Provider>

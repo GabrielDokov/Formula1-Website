@@ -54,7 +54,7 @@ function CreateDriver({
                 </div>
 
 
-                <div class="last">
+                <div className="last">
                     <label className='label' htmlFor="familyName">Last Name</label>
                     <input type="text" className="name" name="familyName" 
                     {...register("familyName",{required:true, minLength:3, maxLength:15})} aria-invalid={errors.familyName ? "true" : "false"} 
