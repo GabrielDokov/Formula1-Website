@@ -23,6 +23,8 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details> -->
+
+<details type='disc'>
  <summary>Table of Contents</summary>
 <ul>
 <li><a href="#about-the-project">About the project</a></li>
@@ -30,6 +32,7 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 <li><a></a></li>
 <li><a></a></li>
 <li><a></a></li>
+</details>
 
 </ul>
 
