@@ -11,7 +11,7 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 <li><a href="#Screenshots">Screenshots</a></li>
 <li><a href='#installation'>Installation</a></li>
 <li><a href='#technologies'>Technologies</a></li>
-<li><a href=''></a></li>
+<li><a href='#contributing'>Contributing</a></li>
 </details>
 
 </ul>
@@ -20,14 +20,14 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 
    <ul>
 
-   <li></li>
-    <li></li>
-     <li></li>
-      <li></li>
-       <li></li>
-   
-   
-   
+   <li>A Guest have access only to the basic website information</li>
+   <li>Sign in functionality</li>
+   <li>Register functionality</li>
+   <li>Logged users can add Driver</li>
+   <li>Logged users can Edit and Delete Driver</li>
+   <li>Logged Users can view information about Circuits</li>
+   <li>Only the Admin can make changes to the Teams</li>
+
    </ul>
 
   
@@ -94,6 +94,11 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
    <li>react-bootstrap</li>
    <li>react-hook-form</li>
    </ul>
+
+
+   ## Contributing
+
+   Contributions to this Formula 1 website project are welcome. You can contribute by fixing bugs, adding new features, improving the design, or updating the content. To contribute, you need to fork this repository, make your changes, and create a pull request.
 
 
 
