@@ -18,7 +18,7 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 
    ## About the project
 
-   <img src='ScreenshotsF1/home'></img>
+   <img src='ScreenshotsF1/homeGuest.png'></img>
 
 
    ## Built With
