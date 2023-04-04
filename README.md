@@ -10,8 +10,8 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 <li><a href="#features">Features</a></li>
 <li><a href="#Screenshots">Screenshots</a></li>
 <li><a href='#installation'>Installation</a></li>
-<li><a href='#built-with'></a></li>
-<li><a></a></li>
+<li><a href='#technologies'>Technologies</a></li>
+<li><a href=''></a></li>
 </details>
 
 </ul>
@@ -85,13 +85,14 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 
    ## Technologies
 
-   <ul>The project is using
 
+   The project is built using:
+
+   <ul>
    <li>React</li>
    <li>react-router</li>
    <li>react-bootstrap</li>
    <li>react-hook-form</li>
-   
    </ul>
 
 
