@@ -3,7 +3,7 @@
 This is the Formula 1 web project using ReactJS.The purpose of the project to provide a platform to Formula 1 fans to get information about teams, drivers and circuits!
 
 
-## Table of Contents
+
 <!-- <details type='disc'>
   <summary>Table of Contents</summary>
   <ol>
@@ -23,7 +23,7 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details> -->
-
+ <summary>Table of Contents</summary>
 <ul>
 <li><a href="#about-the-project">About the project</a></li>
 <li><a href="#built-with"></a>Built With</li>
@@ -32,6 +32,8 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 <li><a></a></li>
 
 </ul>
+
+
 ### Installation
 
 1. Clone the repo
