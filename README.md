@@ -1,7 +1,7 @@
 # Formula1-Website
 
-A website dedicated to the world of Formula 1, featuring, circuits , team and drivers information.
-
+This is the Formula 1 web project using ReactJS.The purpose of the project to provide a platform to Formula 1 fans to get information about teams, drivers, circuits,
+and also to make register and to create their own driver.
 ## Start project
 
 
@@ -9,6 +9,7 @@ A website dedicated to the world of Formula 1, featuring, circuits , team and dr
 <li>Gabriel</li>
 
 </ul>
+<<<<<<< HEAD
 
 
 ### Installation
@@ -25,3 +26,5 @@ A website dedicated to the world of Formula 1, featuring, circuits , team and dr
    ```sh
    npm start
    ```
+=======
+>>>>>>> 788b80611005f50f97ed08888ed4a00ad25276da
