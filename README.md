@@ -12,6 +12,7 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 <li><a href='#installation'>Installation</a></li>
 <li><a href='#technologies'>Technologies</a></li>
 <li><a href='#contributing'>Contributing</a></li>
+<li><a href='#used-information'>Used Information</a></li>
 </details>
 
 </ul>
