@@ -102,10 +102,14 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 
    ## Used Information
 
-   <a href='http://ergast.com/mrd/'>Ergast Developer API</a>
-   <a href='https://www.formula1.com/'>Official Formula1 Website</a>
-   <a href='https://www.youtube.com/watch?v=YLFVD8xaD3U'>Driver Introduction Video</a>
-
+   <ul type='disc'>
+   
+<li><a href='http://ergast.com/mrd/'>Ergast Developer API</a></li>
+<li><a href='https://www.formula1.com/'>Official Formula1 Website</a></li>
+<li><a href='https://www.youtube.com/watch?v=YLFVD8xaD3U'>Driver Introduction Video</a></li>
+   
+   
+   </ul>
 
 
 
