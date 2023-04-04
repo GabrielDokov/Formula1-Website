@@ -7,8 +7,8 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 <details open='open'>
  <summary>Table of Contents</summary>
 <ul>
-<li><a href="#about-the-project">About the project</a></li>
-<li><a href="#built-with">Built With</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#Screenshots">Screenshots</a></li>
 <li><a href='#installation'>Installation</a></li>
 <li><a></a></li>
 <li><a></a></li>
@@ -16,12 +16,40 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 
 </ul>
 
-   ## About the project
+   ## Features
 
+   <ul>
+
+   <li></li>
+    <li></li>
+     <li></li>
+      <li></li>
+       <li></li>
+   
+   
+   
+   </ul>
+
+  
+
+  
+
+
+   ## Screenshots
+   ### Home Page
    <img src='ScreenshotsF1/homeGuest.png'></img>
 
+   ### Drivers
+   <img src='ScreenshotsF1/drivers.png'></img>
 
-   ## Built With
+   ### Teams
+   <img src='ScreenshotsF1/teams.png'></img>
+
+   ### Cirtuits
+   <img src='ScreenshotsF1/circuits.png'></img>
+
+
+    
 
 
 
@@ -42,7 +70,11 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
    cd ./app
    npm install
    ```
-3. Start the project
+4. Start the server
+   ```sh
+   npm run dev
+   ```
+5. Start the React app
    ```sh
    npm start
    ```
