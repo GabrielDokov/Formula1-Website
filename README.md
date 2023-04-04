@@ -4,39 +4,26 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
 
 
 
-<!-- <details type='disc'>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details> -->
-
-<details type='disc'>
+<details open='open'>
  <summary>Table of Contents</summary>
 <ul>
 <li><a href="#about-the-project">About the project</a></li>
-<li><a href="#built-with"></a>Built With</li>
-<li><a></a></li>
+<li><a href="#built-with">Built With</a></li>
+<li><a href='#installation'>Installation</a></li>
 <li><a></a></li>
 <li><a></a></li>
 </details>
 
 </ul>
 
+   ## About the project
 
+
+   ## Built With
+
+
+
+## Start the project
 ### Installation
 
 1. Clone the repo
@@ -58,9 +45,7 @@ This is the Formula 1 web project using ReactJS.The purpose of the project to pr
    npm start
    ```
 
-   ## About the project
 
 
-   ## Built With
 
 
