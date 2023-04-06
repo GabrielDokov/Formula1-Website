@@ -15,25 +15,8 @@
     },
     "seedData": {
 
-        "likes":{
-            "0":{
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "driverId": "0",
-                "_id": "0"  
-            },
-            "1":{
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "driverId": "1",
-                "_id": "1"  
-            },
+        "comments":{
             
-            "2":{
-                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                "driverId": "2",
-                "_id": "2"  
-            }
-
-
         },
 
         "drivers": {

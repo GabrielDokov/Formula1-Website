@@ -7,9 +7,10 @@ export const useFormHook = (initialValues,onSubmitHandler) => {
         setValues(state => ({...state, [e.target.name]: e.target.value}))
     }
 
-    const onSubmit = (e) => {
-    //   e.preventDefault();
+    const onSubmit = (data,e) => {
+        e.preventDefault();
         onSubmitHandler(values)
+        setValues(initialValues)
     }
 
     const changeEdit = (newValues) => {

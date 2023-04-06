@@ -44,6 +44,15 @@
 
 
 export const requestFactory = (token) => {
+
+    if(!token){
+        const serializedAuth = localStorage.getItem('auth');
+
+        if(serializedAuth){
+            const auth = JSON.parse(serializedAuth);
+            token = auth.accessToken
+        }
+    }
     
     return {
         get:request.bind(null,'GET',token),
@@ -53,3 +62,5 @@ export const requestFactory = (token) => {
         put:request.bind(null, 'PUT',token),
     }
 }
+
+// export const requester = requestFactory(localStorage.getItem('auth'))

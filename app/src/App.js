@@ -27,6 +27,7 @@ import { DriverContext } from "./contexts/DriverContext";
 import TeamEdit from "./components/TeamEdit/TeamEdit";
 import RouteGuard from "./components/common/RouteGuard";
 import ScrollUp from "./components/Scroll/Scroll";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
 
 
@@ -38,7 +39,7 @@ import ScrollUp from "./components/Scroll/Scroll";
 function App() {
 
 
-  const[auth, setAuth] = useState({});
+  const[auth, setAuth] = useLocalStorage('auth',{});
 
 
   const driverServices = driverServiceFactory(auth.accessToken)

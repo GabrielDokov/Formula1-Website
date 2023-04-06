@@ -5,25 +5,46 @@ import {driverServiceFactory} from '../../services/driverServices';
 
 import { useService } from "../../hooks/useService";
 import { AuthContext } from "../../contexts/AuthContext";
+import * as commentServices from '../../services/commentServices'
+
+import {useFormHook} from '../../hooks/useForm'
+import {useForm} from 'react-hook-form'
 
 
 function DriverDetails(){
 
+
+  const {register, formState:{errors}, handleSubmit} = useForm();
+
     const  { driverId } = useParams();
     const [driver, setDriver] = useState({})
-    const {userId} = useContext(AuthContext);
-
-
+    const {userId, isAuthenticated} = useContext(AuthContext);
     const driverServices = useService(driverServiceFactory)
+
+    // console.log(isAuthenticated);
+    // console.log(userId)
+
+
 
 
 
     useEffect(() => {
 
-      driverServices.getOne(driverId)
-        .then(result => {
-            setDriver(result)
-        })
+      Promise.all([
+        driverServices.getOne(driverId),
+        commentServices.getAll(driverId)
+      ])
+      .then(([driverData,comments]) => {
+        setDriver({
+          ...driverData,
+          comments,
+        });
+      })
+
+      // driverServices.getOne(driverId)
+      //   .then(result => {
+      //       setDriver(result)
+      //   })
 
     },[driverId])
 
@@ -46,12 +67,31 @@ function DriverDetails(){
     }
   
 
+      
+    const onCommentSubmit = async(values) => {
+      const response = await commentServices.create(driverId, values.comment)
+     
+      setDriver(state => ({
+        ...state,
+        comments:[...state.comments, response],
+
+      }))
+    }
+
+      
+
+    const {values,changeHandler,onSubmit} = useFormHook({
+      comments: ''
+
+    },onCommentSubmit);
+
+
 
 
     return(
-        <>
+       
 
-
+<>
 <div className="card" key={driver.driverId} >
   <img src={driver.imageURL} alt="Avatar" />
   <div className="container">
@@ -74,16 +114,62 @@ function DriverDetails(){
     </div>
 
    {driver._ownerId === userId && (
+
   <>
     <Link to={`/drivers/${driver._id}/edit`} className="edit">EDIT</Link>
     <button  className="delete" onClick={onDeleteDriver}>Delete</button>
+
+
+    
   </>
 )}
+<div className="details-comments">
+                    <h2>Comments:</h2>
+                    <ul>
+                      {driver.comments && driver.comments.map(c => (
+
+                      
+                      
+                            <li key={c._id} className="comment">
+                                <p>{c.comment}</p>
+                            </li>
+                      ))}
+                    </ul>
+
+                    {!driver.comments?.length && (
+                      <p className="no-comment">No comments.</p>
+                    )}
+                   
+                </div>
   </div>
 </div> 
 
+
+
+{isAuthenticated && (
+    <article>
+
+<label>Add Comments:</label>
+<form onSubmit={handleSubmit(onSubmit)}>
+  <textarea name="comment" placeholder="Comment..." value={values.comment} onChange={changeHandler}></textarea>
+  <input type="submit" value='Add Comment'></input>
+</form>
+
+</article>
+ )}
+
+</>
+
+
+
+
+
+
+
+
+
   
-        </>
+       
     )
 
 
