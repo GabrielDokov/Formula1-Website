@@ -5,21 +5,22 @@ import {driverServiceFactory} from '../../services/driverServices';
 
 import { useService } from "../../hooks/useService";
 import { AuthContext } from "../../contexts/AuthContext";
-import * as commentServices from '../../services/commentServices'
+import {commentServiceFactory} from '../../services/commentServices'
 
 import {useFormHook} from '../../hooks/useForm'
-import {useForm} from 'react-hook-form'
+// import {useForm} from 'react-hook-form'
 
 
 function DriverDetails(){
 
 
-  const {register, formState:{errors}, handleSubmit} = useForm();
+  // const {register, formState:{errors}, handleSubmit} = useForm();
 
     const  { driverId } = useParams();
     const [driver, setDriver] = useState({})
-    const {userId, isAuthenticated} = useContext(AuthContext);
+    const {userId, isAuthenticated, username} = useContext(AuthContext);
     const driverServices = useService(driverServiceFactory)
+    const commentService = useService(commentServiceFactory)
 
     // console.log(isAuthenticated);
     // console.log(userId)
@@ -32,7 +33,7 @@ function DriverDetails(){
 
       Promise.all([
         driverServices.getOne(driverId),
-        commentServices.getAll(driverId)
+        commentService.getAll(driverId)
       ])
       .then(([driverData,comments]) => {
         setDriver({
@@ -41,10 +42,6 @@ function DriverDetails(){
         });
       })
 
-      // driverServices.getOne(driverId)
-      //   .then(result => {
-      //       setDriver(result)
-      //   })
 
     },[driverId])
 
@@ -60,20 +57,20 @@ function DriverDetails(){
       
     }
 
-    const [likes, setLike] = useState(0)
-    const onLike = () => {
-      setLike(likes+1)
 
-    }
   
-
       
     const onCommentSubmit = async(values) => {
-      const response = await commentServices.create(driverId, values.comment)
+      const response = await commentService.create(driverId, values.comment)
      
       setDriver(state => ({
         ...state,
-        comments:[...state.comments, response],
+        comments:[...state.comments, {
+          ...response,
+          author:{
+            username
+          }
+        }],
 
       }))
     }
@@ -106,10 +103,6 @@ function DriverDetails(){
          <p><b>Date of Birth</b>: {driver.dateOfBirth}</p>
          <p><b>Driver Code</b>: {driver.code}</p>
       </div>
-  
-        <div >
-         <button onClick={onLike} className="like"><i className="fa-solid fa-heart">{likes}</i></button>
-        </div>
 
     </div>
 
@@ -125,19 +118,17 @@ function DriverDetails(){
 )}
 <div className="details-comments">
                     <h2>Comments:</h2>
-                    <ul>
+                    <ul className="commentUl">
                       {driver.comments && driver.comments.map(c => (
-
-                      
-                      
                             <li key={c._id} className="comment">
-                                <p>{c.comment}</p>
+                                <p><b className="username">{c.author.username}</b>:  {c.comment}</p>
                             </li>
                       ))}
                     </ul>
 
                     {!driver.comments?.length && (
                       <p className="no-comment">No comments.</p>
+                      // TO DO
                     )}
                    
                 </div>
@@ -147,15 +138,16 @@ function DriverDetails(){
 
 
 {isAuthenticated && (
-    <article>
+  <article className="article">
 
-<label>Add Comments:</label>
-<form onSubmit={handleSubmit(onSubmit)}>
-  <textarea name="comment" placeholder="Comment..." value={values.comment} onChange={changeHandler}></textarea>
-  <input type="submit" value='Add Comment'></input>
-</form>
+      <h2>Add Comments:</h2>
+      <form onSubmit={(onSubmit)}>
+      <textarea name="comment" placeholder="Comment..." value={values.comment} onChange={changeHandler}></textarea>
+      <button type="submit" value='Add Comment'>Add Comment</button>
+      </form>
 
-</article>
+  </article>
+
  )}
 
 </>

@@ -17,9 +17,8 @@ function Main(){
   
       driverService.getAll()
       .then(result => {
-        // result.sort((a,b) => a.familyName - b.familyName)
         setDrivers(result);
-        //  console.log(result)
+     
     
       })
   

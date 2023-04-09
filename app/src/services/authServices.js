@@ -16,8 +16,12 @@ export const authServiceFactory = (token) => {
          return request.post(`${baseUrl}/register`, registerData)
       },
       
-      logout:() => {
-        return request.get(`${baseUrl}/logout`)
+      logout:(accessToken) => {
+        return request.get(`${baseUrl}/logout`, {
+         headers:{
+            'X-Authorization': accessToken
+         }
+        })
         
          }
    }

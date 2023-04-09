@@ -37,7 +37,7 @@ function Login()
         <>
         <section>
 
-    <form  className='loginForm' onSubmit={handleSubmit(onSubmit)} >
+    <form  className='loginForm' onSubmit={(onSubmit)} >
        <div className="main">
            <header>
                <h2 className='driverTitle'>Login</h2>
